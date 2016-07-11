@@ -1,2 +1,43 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="panel panel-primary">
+
+			<h1>Hay un Parkeo para ti en:</h1>
+				<form class="form-inline">
+			  <div class="form-group">
+				<input type="date" class="form-control" id="fechaInicio" placeholder="Fecha Inicio">
+			  </div>
+				  <div class="form-group">
+					  <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+				  </div>
+				  <div class="form-group">
+					  <select id="district" class="form-control">
+						  <option>San Isidro</option>
+						  <option>Surco</option>
+						  <option>San Miguel</option>
+					  </select>
+				  </div>
+			<button type="submit" class="btn btn-success">Buscar</button>
+			</form>
+			<br>
+			</br>
+			<div class="container">
+				<div class="row">
+							<div class="col-md-3">
+								<br>
+								<h3>Parking Uno</h3>
+								<p>Se encuentar en un lugar centrico de Surco</p>
+							</div>
+								
+							<div class="col-md-3">
+								<br>
+								<h3>Parking Dos</h3>
+								<p>Se encuentar en un lugar comercial de San Miguel</p>
+							</div>
+							
+							<div class="col-md-3">
+								<br>
+								<h3>Parking Tres</h3>
+								<p>Se encuentar en el centro financiero de San Isidro</p>
+							</div>						
+				</div>
+			</div>
+		</div>
