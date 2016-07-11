@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   end
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   def recuperar_contrasena
   end
   
@@ -13,6 +14,9 @@ class HomeController < ApplicationController
 =======
   def testimonio
 >>>>>>> ebb2028550ecd978b54711587975964320faf03d
+=======
+  def testimonio
+>>>>>>> bd76ac4394fb641671d2d61a22f16300d2afba50
   end
 end
 
