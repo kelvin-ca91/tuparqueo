@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'parkin/nuevo'
+
   get 'contact/contactenos'
 
 
