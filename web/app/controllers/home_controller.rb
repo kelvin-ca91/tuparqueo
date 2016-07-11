@@ -11,6 +11,13 @@ class HomeController < ApplicationController
   
   
   
+  def recuperar_contrasena
+  end
+  
+  def tu_parqueo
+end
+
   def testimonio
   end
 end
+
