@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'account/login'
+
+  get 'account/crear_cuenta'
+
+  get 'account/recuperar_cuenta'
+
   get 'home/index'
 
   get 'home/about'
