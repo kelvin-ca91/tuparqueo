@@ -4142,3 +4142,11 @@ Processing by AccountController#crear_cuenta as HTML
 Completed 200 OK in 1615ms (Views: 1592.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/account/crear_cuenta" for 190.119.250.33 at 2016-07-11 02:05:51 +0000
+Cannot render console from 190.119.250.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountController#crear_cuenta as HTML
+  Rendering account/crear_cuenta.html.erb within layouts/application
+  Rendered account/crear_cuenta.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 218ms (Views: 216.6ms | ActiveRecord: 0.0ms)
+
+
