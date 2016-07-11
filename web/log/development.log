@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:11:23 +0000
 Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by HomeController#index as HTML
@@ -17,6 +18,8 @@ Completed 200 OK in 1266ms (Views: 1243.6ms | ActiveRecord: 0.0ms)
 
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:17:29 +0000
 =======
+=======
+>>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Started GET "/" for 200.0.118.173 at 2016-07-10 22:58:37 +0000
 Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   
@@ -85,11 +88,15 @@ Completed 200 OK in 1199ms (Views: 1174.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:12:04 +0000
+<<<<<<< HEAD
+>>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
+=======
 >>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by HomeController#index as HTML
   Rendering home/index.html.erb within layouts/application
   Rendered home/index.html.erb within layouts/application (0.8ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 Completed 200 OK in 224ms (Views: 221.7ms | ActiveRecord: 0.0ms)
 
@@ -104,25 +111,34 @@ Completed 200 OK in 106ms (Views: 104.3ms | ActiveRecord: 0.0ms)
 
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:17:34 +0000
 =======
+=======
+>>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Completed 200 OK in 199ms (Views: 195.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:12:20 +0000
+<<<<<<< HEAD
+>>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
+=======
 >>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by HomeController#index as HTML
   Rendering home/index.html.erb within layouts/application
   Rendered home/index.html.erb within layouts/application (0.6ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
 Completed 200 OK in 168ms (Views: 164.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:17:37 +0000
 =======
+=======
+>>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Completed 200 OK in 128ms (Views: 125.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:12:22 +0000
+<<<<<<< HEAD
 >>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by HomeController#index as HTML
@@ -157,10 +173,13 @@ Completed 200 OK in 85ms (Views: 82.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:19:15 +0000
+=======
+>>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by HomeController#index as HTML
   Rendering home/index.html.erb within layouts/application
   Rendered home/index.html.erb within layouts/application (0.5ms)
+<<<<<<< HEAD
 Completed 200 OK in 93ms (Views: 90.4ms | ActiveRecord: 0.0ms)
 
 
@@ -187,6 +206,8 @@ Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 183ms (Views: 180.6ms | ActiveRecord: 0.0ms)
 =======
+=======
+>>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Completed 200 OK in 173ms (Views: 168.1ms | ActiveRecord: 0.0ms)
 
 
@@ -204,6 +225,7 @@ Processing by HomeController#index as HTML
   Rendering home/index.html.erb within layouts/application
   Rendered home/index.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 211ms (Views: 208.5ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
 >>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 
 
@@ -387,5 +409,7 @@ Processing by HomeController#testimonio as HTML
   Rendering home/testimonio.html.erb within layouts/application
   Rendered home/testimonio.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 134ms (Views: 131.7ms | ActiveRecord: 0.0ms)
+=======
+>>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 
 
