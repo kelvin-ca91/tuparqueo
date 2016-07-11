@@ -4134,3 +4134,27 @@ Completed 200 OK in 279ms (Views: 274.0ms | ActiveRecord: 0.0ms)
 >>>>>>> 4716046213d4d9543308a4c9b12fc3e4a9919191
 
 
+Started GET "/parkin/nuevo" for 190.119.250.33 at 2016-07-11 01:48:46 +0000
+Cannot render console from 190.119.250.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkinController#nuevo as HTML
+  Rendering parkin/nuevo.html.erb within layouts/application
+  Rendered parkin/nuevo.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 781ms (Views: 759.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parkin/nuevo" for 190.119.250.33 at 2016-07-11 01:53:22 +0000
+Cannot render console from 190.119.250.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkinController#nuevo as HTML
+  Rendering parkin/nuevo.html.erb within layouts/application
+  Rendered parkin/nuevo.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 418ms (Views: 402.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parkin/nuevo" for 190.119.250.33 at 2016-07-11 01:53:26 +0000
+Cannot render console from 190.119.250.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkinController#nuevo as HTML
+  Rendering parkin/nuevo.html.erb within layouts/application
+  Rendered parkin/nuevo.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
