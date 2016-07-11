@@ -381,3 +381,11 @@ Processing by HomeController#testimonio as HTML
 Completed 200 OK in 108ms (Views: 105.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home/testimonio" for 190.119.250.33 at 2016-07-11 00:45:29 +0000
+Cannot render console from 190.119.250.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#testimonio as HTML
+  Rendering home/testimonio.html.erb within layouts/application
+  Rendered home/testimonio.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 134ms (Views: 131.7ms | ActiveRecord: 0.0ms)
+
+
