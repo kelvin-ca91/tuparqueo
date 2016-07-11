@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+
+
+  get 'account/login'
+
+  get 'account/crear_cuenta'
+
+  get 'account/recuperar_cuenta'
+
+
   get 'parkin/nuevo'
 
-  get 'contact/contactenos'
 
+  get 'contact/contactenos'
 
 
   get 'home/index'
