@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'contact/contactenos'
+
+
+
   get 'home/index'
 
   get 'home/about'
