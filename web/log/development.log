@@ -1,8 +1,6 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+=======
+
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:11:23 +0000
 Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by HomeController#index as HTML
@@ -20,15 +18,6 @@ Completed 200 OK in 1266ms (Views: 1243.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for 200.0.118.173 at 2016-07-10 23:17:29 +0000
-=======
-=======
->>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
-=======
->>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
-=======
->>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
-=======
->>>>>>> cb8e70a394148fdbe9ced0a6bde1c08febb1ddab
 Started GET "/" for 200.0.118.173 at 2016-07-10 22:58:37 +0000
 Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   
@@ -4132,5 +4121,13 @@ Processing by HomeController#about as HTML
   Rendered home/about.html.erb within layouts/application (167.8ms)
 Completed 200 OK in 279ms (Views: 274.0ms | ActiveRecord: 0.0ms)
 >>>>>>> 4716046213d4d9543308a4c9b12fc3e4a9919191
+
+
+Started GET "/account/crear_cuenta" for 190.119.250.33 at 2016-07-11 02:00:48 +0000
+Cannot render console from 190.119.250.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccountController#crear_cuenta as HTML
+  Rendering account/crear_cuenta.html.erb within layouts/application
+  Rendered account/crear_cuenta.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 1615ms (Views: 1592.9ms | ActiveRecord: 0.0ms)
 
 
