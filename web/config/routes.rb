@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 <<<<<<< HEAD
+<<<<<<< HEAD
   get 'account/login'
 
   get 'account/crear_cuenta'
 
   get 'account/recuperar_cuenta'
 =======
+=======
+  get 'parkin/nuevo'
+
+>>>>>>> ab33a9d2c6ebf931d4747c451ff65c1580c369e4
   get 'contact/contactenos'
 
 
