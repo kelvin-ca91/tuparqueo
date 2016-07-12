@@ -15,7 +15,7 @@ class HomeController < ApplicationController
   end
   
   def tu_parqueo
-end
+  end
 
   def testimonio
   end

@@ -3,12 +3,13 @@ Rails.application.routes.draw do
 
   get 'account/crear_cuenta'
 
-get "home/perfil"
+  get "home/perfil"
 
   get 'account/recuperar_cuenta'
 
-  get 'parkin/nuevo'
-
+  get 'parking/nuevo'
+  get 'parking/search'
+  
   get 'contact/contactenos'
 
   get 'home/index'
