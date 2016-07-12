@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+
+  get 'comen/comentarios'
+
+  get 'account/login'
+
+  get 'account/crear_cuenta'
+
+  get 'account/recuperar_cuenta'
+
+
+  get 'parkin/nuevo'
+
+
+  get 'contact/contactenos'
+
   get 'account/login'
 
   get 'account/crear_cuenta'
@@ -10,6 +25,7 @@ Rails.application.routes.draw do
   get 'parking/nuevo'
   get 'parking/search'
   
+
   get 'contact/contactenos'
 
   get 'home/index'
@@ -19,9 +35,11 @@ Rails.application.routes.draw do
 
   get 'home/testimonio'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html  
+  
   root 'home#index'
   
+
   get 'home/about'
   get "home/tu_parqueo"
 
