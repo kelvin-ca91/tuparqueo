@@ -1,15 +1,28 @@
 Rails.application.routes.draw do
 
+  get 'comen/comentarios'
+
   get 'account/login'
 
   get 'account/crear_cuenta'
 
   get 'account/recuperar_cuenta'
 
+
+  get 'parkin/nuevo'
+
+
   get 'contact/contactenos'
 
+  get 'account/login'
 
+  get 'account/crear_cuenta'
 
+  get "home/perfil"
+
+  get 'account/recuperar_cuenta'
+
+  get 'contact/contactenos'
 
   get 'parkin/nuevo'
 
