@@ -1,23 +1,26 @@
 class HomeController < ApplicationController
   def index
   end
-
+  
   def about
   end
   
-  def perfil
+  def contact
     
   end
   
-  
-  
-  def recuperar_contrasena
+  def account
+    if !current_user
+      redirect_to root_path
+    else
+      @usuario = User.find(3)
+      @parking = Parking.all
+    end
   end
   
-  def tu_parqueo
+  def mailcontact
+    # Send mailer
+    UserMailer.contact_mail.deliver()
   end
-
-  def testimonio
-  end
+  
 end
-

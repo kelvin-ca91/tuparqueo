@@ -1,46 +1,18 @@
 Rails.application.routes.draw do
-
-  get 'comen/comentarios'
-
-  get 'account/login'
-
-  get 'account/crear_cuenta'
-
-  get 'account/recuperar_cuenta'
-
-
-  get 'parkin/nuevo'
-
-
-  get 'contact/contactenos'
-
-  get 'account/login'
-
-  get 'account/crear_cuenta'
-
-  get "home/perfil"
-
-  get 'account/recuperar_cuenta'
-
-  get 'parking/nuevo'
-  get 'parking/search'
   
+  
+  resources :parkings
 
-  get 'contact/contactenos'
-
-  get 'home/index'
-
+  devise_for :users , :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :omniauth_authorize => 'users/omniauth_authorize' }
+  
+  get 'home/contact'
   get 'home/about'
-  get "home/recuperar_contrasena"
-
-  get 'home/testimonio'
+  get 'home/account'
+  post 'home/mailcontact'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html  
   
   root 'home#index'
   
-
-  get 'home/about'
-  get "home/tu_parqueo"
 
 end

@@ -48,6 +48,6 @@ test:
 #
 production:
   <<: *default
-  database: web_production
+  database: web_tuparqueo
   username: web
   password: <%= ENV['WEB_DATABASE_PASSWORD'] %>
