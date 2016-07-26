@@ -4,10 +4,12 @@
     <title>Web</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Latest compiled and minified CSS -->
+    <%= yield :stylesheets %>
+    
   </head>
 
   <body>
-    
     <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -83,6 +85,7 @@
     </header><!-- /header -->
     <main>
       <%= yield %>
+      
     </main>
       
     <footer>
@@ -109,5 +112,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     
+    <%= yield :javascript %>
   </body>
 </html>

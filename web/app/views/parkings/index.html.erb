@@ -1,3 +1,6 @@
+<% content_for :stylesheets do %>
+<%= stylesheet_link_tag 'parkings' %>
+<% end %>
 <div class="container-fluid">
   <div class="navbar-search text-center">
     <form class="form-inline" method="GET" action="search">
@@ -72,6 +75,6 @@
     </div>
   </div>
 </div>  
-<script>
-  var parking = true;
-</script>
+<% content_for :javascript do %>
+<%= javascript_include_tag 'list_parkings' %>
+<% end %>

@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     if !current_user
       redirect_to root_path
     else
-      @usuario = User.find(3)
+      @usuario = User.find(1)
       @parking = Parking.all
     end
   end
