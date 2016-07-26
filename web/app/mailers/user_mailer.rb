@@ -4,5 +4,6 @@ class UserMailer < ApplicationMailer
     @greeting = "Hi"
 
     mail to: "jonathan.sucasaca@gmail.com", subject: "Contáctanos Web"
+
   end
 end

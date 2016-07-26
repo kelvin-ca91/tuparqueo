@@ -56,46 +56,5 @@ var initialize = function(){
         infoWindow.open(map, marker);
     });
     
-    if(parking){
-        var latitud = -12.096870;
-        var longitud = -77.001359;
-        
-        var marker2 = new google.maps.Marker({
-            position: new google.maps.LatLng(latitud, longitud),
-            map: map
-        });
     
-        google.maps.event.addListener(marker2, 'click', function (e) {
-            infoWindow.setContent('Titulo de estacionamiento<br>Dirección del estacionamiento');
-            infoWindow.open(map, marker2);
-        });
-        
-        
-        var latitud = -12.098781;
-        var longitud = -76.999979;
-        
-        var marker3 = new google.maps.Marker({
-            position: new google.maps.LatLng(latitud, longitud),
-            map: map
-        });
-    
-        google.maps.event.addListener(marker3, 'click', function (e) {
-            infoWindow.setContent('Titulo de estacionamiento<br>Dirección del estacionamiento');
-            infoWindow.open(map, marker3);
-        });
-        
-        
-        var latitud = -12.095802;
-        var longitud =  -76.995439;
-        
-        var marker4 = new google.maps.Marker({
-            position: new google.maps.LatLng(latitud, longitud),
-            map: map
-        });
-    
-        google.maps.event.addListener(marker4, 'click', function (e) {
-            infoWindow.setContent('Titulo de estacionamiento<br>Dirección del estacionamiento');
-            infoWindow.open(map, marker4);
-        });
-    }
 }

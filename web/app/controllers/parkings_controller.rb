@@ -9,12 +9,12 @@ class ParkingsController < ApplicationController
     
     def new
         @parking = Parking.new
-        render '_form_parking'
+        render '_form_parking', layout: 'blank'
     end
     
     def edit
         @parking = Parking.find(params[:id])
-        render '_form_parking'
+        render '_form_parking', layout: 'blank'
     end
     
     def update
