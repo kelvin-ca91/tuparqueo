@@ -40606,3 +40606,1207 @@ Processing by HomeController#contact as HTML
 Completed 200 OK in 195ms (Views: 191.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 200.0.118.173 at 2016-07-26 01:27:43 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 01:30:51 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 206ms (Views: 203.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home/contact" for 200.0.118.173 at 2016-07-26 01:43:41 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#contact as HTML
+  Rendering home/contact.html.erb within layouts/application
+  Rendered home/contact.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 81ms (Views: 78.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-07-26 01:44:53 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 212ms (Views: 209.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 01:44:55 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (12.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 158ms (Views: 154.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 01:45:40 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 208ms (Views: 205.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 01:48:00 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (108.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 190ms (Views: 78.9ms | ActiveRecord: 108.6ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 01:51:00 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (23.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 103ms (Views: 100.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings/2" for 200.0.118.173 at 2016-07-26 01:51:08 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  Rendering parkings/show.html.erb within layouts/application
+  Rendered parkings/show.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 92ms (Views: 85.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 01:52:19 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (30.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 124ms (Views: 120.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 01:55:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (33.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 264ms (Views: 260.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT GET_LOCK('5295678035381066865', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFavorites (20160726021510)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5295678035381066865')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5295678035381066865', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFavorites (20160726021510)
+  [1m[35m (25.6ms)[0m  [1m[35mCREATE TABLE `favorites` (`id` int AUTO_INCREMENT PRIMARY KEY, `users_id` int, `parkings_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160726021510')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5295678035381066865')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `favorites`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `parkings`[0m
+  [1m[35m (1.7ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'parkings'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'favorites'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'parkings'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'users'
+[0m
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:28:33 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (907.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1173ms (Views: 1139.7ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/favorites/create" for 200.0.118.173 at 2016-07-26 02:28:48 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/favorites/create"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (23.0ms)
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:29:36 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (18.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 204ms (Views: 199.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/favorites" for 200.0.118.173 at 2016-07-26 02:29:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"idParking"=>"/parkings/2"}
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 228ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:33:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (23.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 149ms (Views: 146.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:36:44 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (864.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1133ms (Views: 1102.8ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/favorites" for 200.0.118.173 at 2016-07-26 02:36:53 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"idParking"=>"/parkings/2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 22, '2016-07-26 02:36:53', '2016-07-26 02:36:53')[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 313ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:39:09 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (86.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 186ms (Views: 181.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/favorites" for 200.0.118.173 at 2016-07-26 02:39:15 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"idParking"=>"/parkings/2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 22, '2016-07-26 02:39:15', '2016-07-26 02:39:15')[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 368ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:39:38 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (11.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 234ms (Views: 222.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:49:26 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (16.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 127ms (Views: 124.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/favorites" for 200.0.118.173 at 2016-07-26 02:49:32 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"idParking"=>"/parkings/2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 22, '2016-07-26 02:49:32', '2016-07-26 02:49:32')[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 344ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:51:30 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (959.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1388ms (Views: 1360.9ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/favorites" for 200.0.118.173 at 2016-07-26 02:52:05 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"idParking"=>"/parkings/2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 22, '2016-07-26 02:52:05', '2016-07-26 02:52:05')[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 264ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:52:31 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (159.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 286ms (Views: 283.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/favorites" for 200.0.118.173 at 2016-07-26 02:52:51 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"/parkings/2", "userId"=>"1"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 22, '2016-07-26 02:52:51', '2016-07-26 02:52:51')[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 355ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/parkings" for 200.0.118.173 at 2016-07-26 02:53:23 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 109ms (Views: 106.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/favorites" for 200.0.118.173 at 2016-07-26 02:53:34 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"2", "userId"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 22, '2016-07-26 02:53:34', '2016-07-26 02:53:34')[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 270ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-07-31 23:58:50 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1097.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1504ms (Views: 1467.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-07-31 23:59:04 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (13.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 189ms (Views: 186.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-07-31 23:59:07 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 91ms (Views: 89.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-07-31 23:59:24 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (126.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 195ms (Views: 187.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-07-31 23:59:48 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 188ms (Views: 184.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-07-31 23:59:57 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"3", "userId"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (3, 1, '2016-07-31 23:59:57', '2016-07-31 23:59:57')[0m
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 405ms (ActiveRecord: 171.9ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 00:03:38 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"2", "userId"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 2, '2016-08-01 00:03:38', '2016-08-01 00:03:38')[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 238ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:03:40 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (17.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 173ms (Views: 164.4ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 00:03:43 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"4", "userId"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 4, '2016-08-01 00:03:43', '2016-08-01 00:03:43')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 180ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:03:58 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 98ms (Views: 83.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 00:04:02 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"2", "userId"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 2, '2016-08-01 00:04:02', '2016-08-01 00:04:02')[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 212ms (ActiveRecord: 5.6ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 00:04:04 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"4", "userId"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 4, '2016-08-01 00:04:04', '2016-08-01 00:04:04')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 197ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:12:20 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (only Hash, Symbol and Array are allowed):
+    29:       
+    30:     </div>
+    31:     <div class="col-sm-5" id="list-search">
+    32:       <% @parking.each do |park| %>
+    33:         <div class="row">    
+    34:             <div class="col-sm-5">
+    35:               <div class="content-params-parkings">
+  
+app/views/parkings/index.html.erb:32:in `_app_views_parkings_index_html_erb___409572581757259448_70059171664460'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.7ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:13:17 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (only Hash, Symbol and Array are allowed):
+    30:     </div>
+    31:     <div class="col-sm-5" id="list-search">
+    32:       <%
+    33:       debug @parking
+    34:       @parking.each do |park| %>
+    35:         <div class="row">    
+    36:             <div class="col-sm-5">
+  
+app/views/parkings/index.html.erb:33:in `_app_views_parkings_index_html_erb___409572581757259448_70058937521520'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.4ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:13:58 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT p.* FROM parkings p[0m
+  Rendered parkings/index.html.erb within layouts/application (33.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 162ms (Views: 145.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:17:02 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (81.4ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Can't join 'Parking' to association named 'favorites'; perhaps you misspelled it?):
+    29:       
+    30:     </div>
+    31:     <div class="col-sm-5" id="list-search">
+    32:       <% @parking.each do |park| %>
+    33:         <div class="row">    
+    34:             <div class="col-sm-5">
+    35:               <div class="content-params-parkings">
+  
+app/views/parkings/index.html.erb:32:in `_app_views_parkings_index_html_erb___409572581757259448_70059139226160'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.2ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:22:37 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/workspace/web/app/controllers/parkings_controller.rb:5: syntax error, unexpected tCONSTANT, expecting keyword_end
+        @parking ActiveRecord::Base.connection.execute("SE...
+                             ^):
+  
+app/controllers/parkings_controller.rb:5: syntax error, unexpected tCONSTANT, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.0ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:23:55 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/workspace/web/app/controllers/parkings_controller.rb:5: syntax error, unexpected tCONSTANT, expecting keyword_end
+        @parking ActiveRecord::Base.connection.exec_query(...
+                             ^):
+  
+app/controllers/parkings_controller.rb:5: syntax error, unexpected tCONSTANT, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.3ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:24:11 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT * FROM parkings[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Hash:0x007f6fbc3191a0>):
+    33:         <div class="row">    
+    34:             <div class="col-sm-5">
+    35:               <div class="content-params-parkings">
+    36:                 <i class="fa fa-star-o icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+    37:               </div>
+    38:               <a href="<%= parking_path( park.id ) %>">
+    39:                 <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+  
+app/views/parkings/index.html.erb:36:in `block in _app_views_parkings_index_html_erb___409572581757259448_70059138598360'
+app/views/parkings/index.html.erb:32:in `_app_views_parkings_index_html_erb___409572581757259448_70059138598360'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.3ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:24:40 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[35mSQL (1.3ms)[0m  [1m[34mSELECT * FROM parkings[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (142.0ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Hash:0x00000003acc378>):
+    35:         <div class="row">    
+    36:             <div class="col-sm-5">
+    37:               <div class="content-params-parkings">
+    38:                 <i class="fa fa-star-o icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+    39:               </div>
+    40:               <a href="<%= parking_path( park.id ) %>">
+    41:                 <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+  
+app/views/parkings/index.html.erb:38:in `block in _app_views_parkings_index_html_erb___409572581757259448_37741600'
+app/views/parkings/index.html.erb:34:in `_app_views_parkings_index_html_erb___409572581757259448_37741600'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (141.7ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:24:46 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT * FROM parkings[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Hash:0x007f6fdd5d9400>):
+    35:         <div class="row">    
+    36:             <div class="col-sm-5">
+    37:               <div class="content-params-parkings">
+    38:                 <i class="fa fa-star-o icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+    39:               </div>
+    40:               <a href="<%= parking_path( park.id ) %>">
+    41:                 <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+  
+app/views/parkings/index.html.erb:38:in `block in _app_views_parkings_index_html_erb___409572581757259448_70059216702800'
+app/views/parkings/index.html.erb:34:in `_app_views_parkings_index_html_erb___409572581757259448_70059216702800'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.5ms)
+Started GET "/" for 66.249.88.11 at 2016-08-01 00:24:59 +0000
+Cannot render console from 66.249.88.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 258ms (Views: 256.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:25:24 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[35mSQL (0.2ms)[0m  [1m[34mSELECT * FROM parkings[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+SystemExit (D:):
+  
+app/views/parkings/index.html.erb:34:in `abort'
+app/views/parkings/index.html.erb:34:in `_app_views_parkings_index_html_erb___409572581757259448_70059214625600'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (150.1ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:25:47 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM parkings[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Array:0x007f6fdddb4d50>):
+    34:         <div class="row">    
+    35:             <div class="col-sm-5">
+    36:               <div class="content-params-parkings">
+    37:                 <i class="fa fa-star-o icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+    38:               </div>
+    39:               <a href="<%= parking_path( park.id ) %>">
+    40:                 <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+  
+app/views/parkings/index.html.erb:37:in `block in _app_views_parkings_index_html_erb___409572581757259448_70059218865640'
+app/views/parkings/index.html.erb:33:in `each'
+app/views/parkings/index.html.erb:33:in `_app_views_parkings_index_html_erb___409572581757259448_70059218865640'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.5ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:26:32 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 144ms (Views: 123.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:27:01 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT p.*, f.id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 81.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"parkings", :id=>nil} missing required keys: [:id]):
+    36:               <div class="content-params-parkings">
+    37:                 <i class="fa fa-star-o icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+    38:               </div>
+    39:               <a href="<%= parking_path( park.id ) %>">
+    40:                 <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+    41:               </a>
+    42:             </div>
+  
+app/views/parkings/index.html.erb:39:in `block in _app_views_parkings_index_html_erb___409572581757259448_70059221201520'
+app/views/parkings/index.html.erb:33:in `each'
+app/views/parkings/index.html.erb:33:in `_app_views_parkings_index_html_erb___409572581757259448_70059221201520'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (122.9ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:27:38 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  p.id as id,p.*, f.id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"parkings", :id=>nil} missing required keys: [:id]):
+    36:               <div class="content-params-parkings">
+    37:                 <i class="fa fa-star-o icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+    38:               </div>
+    39:               <a href="<%= parking_path( park.id ) %>">
+    40:                 <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+    41:               </a>
+    42:             </div>
+  
+app/views/parkings/index.html.erb:39:in `block in _app_views_parkings_index_html_erb___409572581757259448_70059221123760'
+app/views/parkings/index.html.erb:33:in `each'
+app/views/parkings/index.html.erb:33:in `_app_views_parkings_index_html_erb___409572581757259448_70059221123760'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.6ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:28:28 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  p.id as id,p.*, f.id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 148ms (Views: 141.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:28:47 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 126ms (Views: 102.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:29:13 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 119ms (Views: 101.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:29:25 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 113ms (Views: 105.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:30:10 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+
+  Rendered parkings/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 134ms (Views: 130.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:30:32 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:31:14 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT `parkings`.* FROM `parkings`[0m
+  Rendered parkings/index.html.erb within layouts/application (28.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 96ms (Views: 93.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:31:30 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (1.5ms)[0m  [1m[34mSELECT * FROM parkings[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (27.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 130ms (Views: 112.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:31:47 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (22.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 126ms (Views: 109.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:34:47 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as wtf FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (28.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 186ms (Views: 160.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:35:28 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.9ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 119ms (Views: 87.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 00:35:43 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 122ms (Views: 118.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 01:58:08 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/web/app/views/parkings/index.html.erb:88: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/web/app/views/parkings/index.html.erb:90: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/parkings/index.html.erb:88: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/parkings/index.html.erb:90: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.1ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 01:59:16 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 98ms (Views: 93.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 01:59:49 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (140.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 223ms (Views: 79.9ms | ActiveRecord: 140.5ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:00:04 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 129ms (Views: 125.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:00:59 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.7ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (19.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 330ms (Views: 145.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 02:01:19 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"3", "userId"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 3, '2016-08-01 02:01:19', '2016-08-01 02:01:19')[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 222ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:01:24 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 99ms (Views: 95.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:01:54 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (68.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 165ms (Views: 161.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:02:56 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (23.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 131ms (Views: 128.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/favorites" for 181.64.14.246 at 2016-08-01 02:03:05 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [DELETE] "/favorites"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (25.6ms)
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:04:40 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (17.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 167ms (Views: 163.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:04:59 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 87ms (Views: 83.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:07:31 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (28.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 194ms (Views: 166.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 02:07:36 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"", "userId"=>"1"}
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `created_at`, `updated_at`) VALUES (1, '2016-08-01 02:07:36', '2016-08-01 02:07:36')[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 323ms (ActiveRecord: 23.7ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:08:39 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 117ms (Views: 113.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 02:08:44 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"2", "userId"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 2, '2016-08-01 02:08:44', '2016-08-01 02:08:44')[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 193ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:08:59 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 213ms (Views: 209.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:09:31 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 122ms (Views: 104.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 02:09:35 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"3", "userId"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 3, '2016-08-01 02:09:35', '2016-08-01 02:09:35')[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 299ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/parkings" for 181.64.14.246 at 2016-08-01 02:09:58 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id[0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 213ms (Views: 189.8ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/favorites" for 181.64.14.246 at 2016-08-01 02:10:06 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"4", "userId"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 4, '2016-08-01 02:10:06', '2016-08-01 02:10:06')[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 463ms (ActiveRecord: 7.0ms)
+
+

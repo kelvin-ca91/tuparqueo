@@ -1,7 +1,33 @@
 $(document).ready(function() {
-    // Inicia Google maps
-    google.maps.event.addDomListener(window, 'load', initialize);    
-    
+  // Inicia Google maps
+  google.maps.event.addDomListener(window, 'load', initialize);    
+  
+  // Evento cuando se agrega o desagrega de favoritos
+  $('.icon-favorite').on('click', function(){
+    var $this = $(this);
+    if( $this.hasClass('fa-star-o') ){
+      
+      $this.removeClass('fa-star-o').addClass('fa-star');
+      $.ajax({
+        url: '../favorites',
+        method: 'POST',
+        data: {parkingId: $this.attr('data-id'), userId: $('#userId').html() },
+        success:function(data){
+          $this.attr('data-favorite-id', data);
+        }
+      });
+    }else{
+      $this.removeClass('fa-star').addClass('fa-star-o');
+      $.ajax({
+        url: '../favorites/',
+        method: 'DELETE',
+        data: {parkingId: $this.attr('data-id'), userId: $('#userId').html() },
+        success:function(){
+          console.log('Its okaay :D');
+        }
+      });
+    }
+  });
 });
 
 var initialize = function(){

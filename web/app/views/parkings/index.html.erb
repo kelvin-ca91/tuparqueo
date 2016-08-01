@@ -29,13 +29,19 @@
       
     </div>
     <div class="col-sm-5" id="list-search">
-      <% @parking.each do |park| %>
-        <div class="row">
-          <a href="<%= parking_path( park.id ) %>">
+      <%
+      @parking.each do |park| %>
+        <div class="row">    
             <div class="col-sm-5">
-               <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+              <div class="content-params-parkings">
+                <i data-favorite-id="<%= park.favorite_id %>" class="fa <% if park.favorite_id  %>fa-star <% else %> fa-star-o<% end %> icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+              </div>
+              <a href="<%= parking_path( park.id ) %>">
+                <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+              </a>
             </div>
-            <div class="col-sm-7 text-justify">
+            <a href="<%= parking_path( park.id ) %>">
+              <div class="col-sm-7 text-justify">
               <div>
                 <label><strong>Título:</strong></label>
                 <span><%= park.titulo %></span>
@@ -69,6 +75,7 @@
                 </div>
               </div>
             </div>
+            </a>
           </a>
         </div>
       <% end %>

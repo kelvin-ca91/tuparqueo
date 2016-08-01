@@ -1,7 +1,10 @@
 class ParkingsController < ApplicationController
     def index
-        @parking = Parking.all        
+        # @parking = Parking.all        
+        # @parking = Parking.select('p.*, ').from('parkings p').left_outer_joins(:favorites)
+        @parking = Parking.find_by_sql("SELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id")
     end
+    # 
     
     def show
         @parking = Parking.find(params[:id])

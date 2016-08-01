@@ -56,6 +56,7 @@
               <li><%= link_to 'Contáctanos', home_contact_path %></li>
               <% if current_user %>
                 <li class="dropdown">
+                  <span class="hidden" id="userId"><%= current_user.id %></span>
                   <a href="#" id="image-profile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <%= image_tag('profiles/user1_profile.jpg', :class =>'img-responsive img-circle') %>
                   </a>
