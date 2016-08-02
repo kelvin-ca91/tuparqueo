@@ -8,5 +8,6 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
+    Favorite.find(params[:id]).destroy
   end
 end

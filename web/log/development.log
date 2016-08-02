@@ -1,0 +1,308 @@
+Started GET "/" for 200.4.199.12 at 2016-08-02 21:35:09 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (615.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 892ms (Views: 860.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/home/account" for 200.4.199.12 at 2016-08-02 21:35:15 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado = 1[0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.* FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado = 1 AND f.users_id= 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 181ms (Views: 103.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 200.4.199.12 at 2016-08-02 22:00:21 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (736.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1018ms (Views: 971.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/home/account" for 200.4.199.12 at 2016-08-02 22:00:25 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado = 1[0m
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT p.* FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado = 1 AND f.users_id= 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (181.9ms)
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 7.6ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( account_list_parking.js )` to `config/initializers/assets.rb` and restart your server):
+    129: </div>
+    130: 
+    131: <% content_for :javascript do %>
+    132: <%= javascript_include_tag 'account_list_parking' %>
+    133: <% end %>
+  
+app/views/home/account.html.erb:132:in `block in _app_views_home_account_html_erb__3555216959281226358_69879487963140'
+app/views/home/account.html.erb:131:in `_app_views_home_account_html_erb__3555216959281226358_69879487963140'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (136.0ms)
+Started GET "/" for 200.4.199.12 at 2016-08-02 22:00:45 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 108ms (Views: 106.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home/account" for 200.4.199.12 at 2016-08-02 22:00:48 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado = 1[0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.* FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado = 1 AND f.users_id= 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 202ms (Views: 195.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings/new" for 200.4.199.12 at 2016-08-02 22:00:54 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#new as HTML
+  Rendering parkings/_form_parking.html.erb within layouts/blank
+  Rendered parkings/_form_parking.html.erb within layouts/blank (27.6ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.4.199.12 at 2016-08-02 22:08:29 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (17.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 113ms (Views: 103.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/home/account" for 200.4.199.12 at 2016-08-02 22:08:32 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mParking Load (75.0ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado = 1[0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.* FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado = 1 AND f.users_id= 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 218ms (Views: 102.7ms | ActiveRecord: 79.1ms)
+
+
+Started DELETE "/favorites/2" for 200.4.199.12 at 2016-08-02 22:08:40 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mFavorite Load (2.1ms)[0m  [1m[34mSELECT  `favorites`.* FROM `favorites` WHERE `favorites`.`id` = 2 LIMIT 1[0m
+Completed 404 Not Found in 5ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=2):
+  
+app/controllers/favorites_controller.rb:11:in `destroy'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (101.0ms)
+Started DELETE "/favorites/2" for 200.4.199.12 at 2016-08-02 22:08:57 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  `favorites`.* FROM `favorites` WHERE `favorites`.`id` = 2 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=2):
+  
+app/controllers/favorites_controller.rb:11:in `destroy'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (84.2ms)
+Started DELETE "/favorites/2" for 200.4.199.12 at 2016-08-02 22:10:09 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by FavoritesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT  `favorites`.* FROM `favorites` WHERE `favorites`.`id` = 2 LIMIT 1[0m
+Completed 404 Not Found in 56ms (ActiveRecord: 2.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=2):
+  
+app/controllers/favorites_controller.rb:11:in `destroy'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (106.6ms)
+Started GET "/" for 200.4.199.12 at 2016-08-02 22:11:25 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (387.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 531ms (Views: 515.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/home/account" for 200.4.199.12 at 2016-08-02 22:11:30 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado = 1[0m
+  [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado = 1 AND f.users_id= 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 228ms (Views: 143.5ms | ActiveRecord: 4.7ms)
+
+
+Started DELETE "/favorites/1" for 200.4.199.12 at 2016-08-02 22:11:41 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT  `favorites`.* FROM `favorites` WHERE `favorites`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `favorites` WHERE `favorites`.`id` = 1[0m
+  [1m[35m (171.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#destroy, rendering head :no_content
+Completed 204 No Content in 417ms (ActiveRecord: 172.3ms)
+
+
+Started GET "/" for 200.4.199.12 at 2016-08-02 22:13:34 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 224ms (Views: 221.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parkings" for 200.4.199.12 at 2016-08-02 22:13:35 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (122.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 305ms (Views: 298.5ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/favorites/" for 200.4.199.12 at 2016-08-02 22:13:38 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [DELETE] "/favorites"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (34.5ms)
+Started POST "/favorites" for 200.4.199.12 at 2016-08-02 22:13:43 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#create as */*
+  Parameters: {"parkingId"=>"2", "userId"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `favorites` (`users_id`, `parkings_id`, `created_at`, `updated_at`) VALUES (1, 2, '2016-08-02 22:13:43', '2016-08-02 22:13:43')[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#create, rendering head :no_content
+Completed 204 No Content in 282ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/home/account" for 200.4.199.12 at 2016-08-02 22:13:48 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado = 1[0m
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado = 1 AND f.users_id= 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 131ms (Views: 123.8ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/favorites/2" for 200.4.199.12 at 2016-08-02 22:13:57 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT  `favorites`.* FROM `favorites` WHERE `favorites`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `favorites` WHERE `favorites`.`id` = 2[0m
+  [1m[35m (130.6ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#destroy, rendering head :no_content
+Completed 204 No Content in 366ms (ActiveRecord: 131.4ms)
+
+
+Started GET "/home/account" for 200.4.199.12 at 2016-08-02 22:14:03 +0000
+Cannot render console from 200.4.199.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado = 1[0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado = 1 AND f.users_id= 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 269ms (Views: 263.0ms | ActiveRecord: 1.0ms)
+
+
