@@ -45,8 +45,6 @@ ActiveRecord::Schema.define(version: 20160801213055) do
     t.integer  "estado"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-    t.integer  "users_id"
-    t.integer  "estado"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

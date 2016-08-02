@@ -16,5 +16,3 @@ Rails.application.config.assets.precompile += %w( detail_parking.scss )
 Rails.application.config.assets.precompile += %w( detail_parking.js )
 Rails.application.config.assets.precompile += %w( list_parkings.js )
 Rails.application.config.assets.precompile += %w( contact.js )
-Rails.application.config.assets.precompile += %w( account_list_parking.js )
-
