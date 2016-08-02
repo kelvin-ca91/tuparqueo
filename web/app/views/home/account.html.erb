@@ -8,7 +8,7 @@
       </div>
       <div class="list-group">
         <a href="javascript:;" data-id="account-profile" class="list-group-item">
-          MIS DATOS <%= @usuario.nombre %>
+          MIS DATOS <%= debug current_user %>
         </a>
         <a href="javascript:;" data-id="account-reserves" class="list-group-item">
           <span class="badge">0</span>
@@ -33,16 +33,18 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nombres y Apellidos:</label>
-                  <input type="text" class="form-control" />
+                  <div><%= current_user.nombre %></div>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Correo:</label>
-                  <input type="text" class="form-control" />
+                  <div><%= current_user.email %></div>
                 </div>
               </div>
             </div>
+            
+            <button class="btn btn-success"><i class="fa fa-pencil"></i> Editar</button>
         </div>
       </div>
       <div class="panel panel-primary hidden" id="account-reserves">

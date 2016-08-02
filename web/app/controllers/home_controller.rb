@@ -13,7 +13,6 @@ class HomeController < ApplicationController
     if !current_user
       redirect_to root_path
     else
-      @usuario = User.find(1)
       @parking = Parking.find_by_sql("SELECT * FROM parkings WHERE users_id = #{current_user.id} AND estado = 1")
       @favorite = Favorite.find_by_sql("SELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado = 1 AND f.users_id= #{current_user.id}")
     end
