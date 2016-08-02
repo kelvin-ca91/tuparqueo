@@ -1,8 +1,6 @@
 class ParkingsController < ApplicationController
     def index
-        # @parking = Parking.all        
-        # @parking = Parking.select('p.*, ').from('parkings p').left_outer_joins(:favorites)
-        @parking = Parking.find_by_sql("SELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id")
+        @parking = Parking.find_by_sql("SELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 ")
     end
     # 
     
@@ -35,6 +33,8 @@ class ParkingsController < ApplicationController
     
     def create
         @parking = Parking.new(parking_params)
+        @parking.users_id = current_user.id
+        @parking.estado = 1
         if @parking.save
             redirect_to home_account_path
         else
