@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160801195956) do
+ActiveRecord::Schema.define(version: 20160801213055) do
 
   create_table "favorites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "users_id"
@@ -21,14 +21,30 @@ ActiveRecord::Schema.define(version: 20160801195956) do
 
   create_table "parkings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "titulo"
-    t.text     "descripcion", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.float    "costo_dia",   limit: 53
-    t.float    "costo_mes",   limit: 53
-    t.float    "costo_anho",  limit: 53
+    t.text     "descripcion",  limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.float    "costo_dia",    limit: 53
+    t.float    "costo_mes",    limit: 53
+    t.float    "costo_anho",   limit: 53
     t.string   "latitud"
     t.string   "longitud"
+    t.string   "direccion"
+    t.integer  "districts_id"
+    t.integer  "estado"
+  end
+
+  create_table "rentals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "users_id"
+    t.integer  "parkings_id"
+    t.date     "fecha_inicio"
+    t.date     "fecha_fin"
+    t.decimal  "monto",        precision: 10
+    t.integer  "cant_tiempo"
+    t.string   "tiempo"
+    t.integer  "estado"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
