@@ -19,7 +19,7 @@
           MIS PARQUEOS
         </a>
         <a href="javascript:;" data-id="account-favorites" class="list-group-item">
-          <span class="badge">0</span>
+          <span class="badge"><%= @favorite.size %></span>
           MIS FAVORITOS
         </a>
       </div>
@@ -98,7 +98,7 @@
           </table>
         </div>
       </div>
-      <div class="panel panel-primary hidden" id="account-favorites">
+      <div class="panel panel-primary" id="account-favorites">
         <div class="panel-heading text-center"><strong>LISTA DE PARQUEOS FAVORITOS</strong></div>
         <div class="panel-body">
 
@@ -109,6 +109,18 @@
               <th class='col-md-3'>Dirección</th>
               <th class='col-md-2'></th>
             </tr>
+            <% @favorite.each do |favorite| %>
+              <tr>
+                <td><%= favorite.titulo %></td>
+                <td><%= truncate(favorite.descripcion, :length => 100) %></td>
+                <td><%= truncate(favorite.direccion, :length => 100) %></td>
+                <td class="text-center">
+                  <button type="button" data-id="<%= favorite.id %>" class="btn btn-danger btn-delete-parking">
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr> 
+            <%end%>
           </table>
         </div>
       </div>
