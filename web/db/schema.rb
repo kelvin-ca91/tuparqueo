@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160801195956) do
+ActiveRecord::Schema.define(version: 20160802193024) do
 
   create_table "favorites", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "users_id"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20160801195956) do
     t.float    "costo_anho",  limit: 53
     t.string   "latitud"
     t.string   "longitud"
+    t.integer  "users_id"
+    t.integer  "estado"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

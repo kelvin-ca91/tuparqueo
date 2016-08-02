@@ -8,7 +8,7 @@
       </div>
       <div class="list-group">
         <a href="javascript:;" data-id="account-profile" class="list-group-item">
-          MIS DATOS <%= @usuario.nombre %>
+          MIS DATOS 
         </a>
         <a href="javascript:;" data-id="account-reserves" class="list-group-item">
           <span class="badge">0</span>
@@ -19,7 +19,7 @@
           MIS PARQUEOS
         </a>
         <a href="javascript:;" data-id="account-favorites" class="list-group-item">
-          <span class="badge">0</span>
+          <span class="badge"><%= @favorite.size %></span>
           MIS FAVORITOS
         </a>
       </div>
