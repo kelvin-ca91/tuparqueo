@@ -25,7 +25,6 @@ class ParkingsController < ApplicationController
         else
             render action: 'edit'
         end
-        
     end
     
     def destroy
