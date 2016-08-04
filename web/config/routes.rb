@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
   
-  
-  get 'favorites/index'
-
-  get 'favorites/create'
-
-  get 'favorites/destroy'
-
   resources :parkings
   resources :favorites
 
