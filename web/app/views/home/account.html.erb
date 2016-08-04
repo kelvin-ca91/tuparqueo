@@ -7,14 +7,14 @@
         </a>
       </div>
       <div class="list-group">
-        <a href="javascript:;" data-id="account-profile" class="list-group-item">
-          MIS DATOS <%= debug current_user %>
+        <a href="javascript:;" data-id="account-profile" class="list-group-item active">
+          MIS DATOS 
         </a>
         <a href="javascript:;" data-id="account-reserves" class="list-group-item">
           <span class="badge">0</span>
-          MIS RESERVAS
+          MIS ALQUILERES
         </a>
-        <a href="javascript:;" data-id="account-parkings" class="list-group-item active">
+        <a href="javascript:;" data-id="account-parkings" class="list-group-item ">
           <span class="badge"><%= @parking.size %></span>
           MIS PARQUEOS
         </a>
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="col-md-9">
-      <div class="panel panel-primary hidden" id="account-profile">
+      <div class="panel panel-primary " id="account-profile">
         <div class="panel-heading text-center"><strong>Actuaizar mis datos</strong></div>
         <div class="panel-body">
           
@@ -44,11 +44,11 @@
               </div>
             </div>
             
-            <button class="btn btn-success"><i class="fa fa-pencil"></i> Editar</button>
+            <a class="btn btn-success" href="<%= edit_user_registration_path %>"><i class="fa fa-pencil"></i> Editar</a>
         </div>
       </div>
       <div class="panel panel-primary hidden" id="account-reserves">
-        <div class="panel-heading text-center"><strong>LISTA DE RESERVAS REALIZADAS</strong></div>
+        <div class="panel-heading text-center"><strong>LISTA DE ALQUILERES REALIZADOS</strong></div>
         <div class="panel-body">
           <table class="table table-bordered">
             <tr>
@@ -61,7 +61,7 @@
           </table>
         </div>
       </div>
-      <div class="panel panel-primary " id="account-parkings">
+      <div class="panel panel-primary hidden" id="account-parkings">
         <div class="panel-heading text-center"><strong>LISTA DE PARQUEOS REGISTRADOS</strong></div>
         <div class="panel-body">
           <button type="button" class="btn btn-success" id="btn-new-parking">
