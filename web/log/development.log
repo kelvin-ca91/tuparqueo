@@ -35613,3 +35613,426 @@ Processing by HomeController#contact as HTML
 Completed 200 OK in 225ms (Views: 221.8ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('5295678035381066865', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20160718022803)
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718022803')[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20160718023011)
+  [1m[35m (20.4ms)[0m  [1m[35mALTER TABLE `users` ADD `email` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (27.3ms)[0m  [1m[35mALTER TABLE `users` ADD `encrypted_password` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (14.8ms)[0m  [1m[35mALTER TABLE `users` ADD `reset_password_token` varchar(255)[0m
+  [1m[35m (15.7ms)[0m  [1m[35mALTER TABLE `users` ADD `reset_password_sent_at` datetime[0m
+  [1m[35m (15.4ms)[0m  [1m[35mALTER TABLE `users` ADD `remember_created_at` datetime[0m
+  [1m[35m (14.9ms)[0m  [1m[35mALTER TABLE `users` ADD `sign_in_count` int DEFAULT 0 NOT NULL[0m
+  [1m[35m (18.8ms)[0m  [1m[35mALTER TABLE `users` ADD `current_sign_in_at` datetime[0m
+  [1m[35m (17.3ms)[0m  [1m[35mALTER TABLE `users` ADD `last_sign_in_at` datetime[0m
+  [1m[35m (18.8ms)[0m  [1m[35mALTER TABLE `users` ADD `current_sign_in_ip` varchar(255)[0m
+  [1m[35m (16.5ms)[0m  [1m[35mALTER TABLE `users` ADD `last_sign_in_ip` varchar(255)[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718023011')[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to Users (20160718060124)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718060124')[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddProviderToUsers (20160718060520)
+  [1m[35m (18.0ms)[0m  [1m[35mALTER TABLE `users` ADD `provider` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718060520')[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUidToUsers (20160718060549)
+  [1m[35m (19.2ms)[0m  [1m[35mALTER TABLE `users` ADD `uid` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718060549')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParkings (20160718190229)
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE `parkings` (`id` int AUTO_INCREMENT PRIMARY KEY, `titulo` varchar(255), `descripcion` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718190229')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUsersIdToParkings (20160718213706)
+  [1m[35m (18.9ms)[0m  [1m[35mALTER TABLE `parkings` ADD `users_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718213706')[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveUsersIdToParkings (20160718214100)
+  [1m[35m (28.7ms)[0m  [1m[35mALTER TABLE `parkings` DROP `users_id`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718214100')[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCostoDiaToParkings (20160718221802)
+  [1m[35m (20.8ms)[0m  [1m[35mALTER TABLE `parkings` ADD `costo_dia` double[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718221802')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCostoMesToParkings (20160718221819)
+  [1m[35m (18.9ms)[0m  [1m[35mALTER TABLE `parkings` ADD `costo_mes` double[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718221819')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCostoAnhoToParkings (20160718221833)
+  [1m[35m (18.0ms)[0m  [1m[35mALTER TABLE `parkings` ADD `costo_anho` double[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160718221833')[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-07-23 21:36:59', '2016-07-23 21:36:59')[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5295678035381066865')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `parkings`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'parkings'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'parkings'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'users'
+[0m
+Started GET "/" for 200.0.118.173 at 2016-07-23 21:39:16 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1088.7ms)
+Completed 200 OK in 1284ms (Views: 1267.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-07-23 21:39:26 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 89ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-07-23 21:39:35 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 80ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-07-23 21:39:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 107ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-07-23 21:39:51 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 102ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/contact" for 200.0.118.173 at 2016-07-23 22:48:08 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#contact as HTML
+  Rendering home/contact.html.erb within layouts/application
+  Rendered home/contact.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 126ms (Views: 122.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/home/mailcontact" for 200.0.118.173 at 2016-07-23 22:48:26 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#mailcontact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2olbIdE3aIrZleELSwdJYc0LoZg2u/z7BmDSRH4YL1vhL4eR6sZWB9UQ8wPj3m1FY5LkgoBfzjJSawPgy7VouA==", "nombres"=>"ROBERT FREY", "telefono"=>"982700101", "mensaje"=>"prueba", "button"=>""}
+  Rendering user_mailer/contact_mail.html.erb within layouts/mailer
+  Rendered user_mailer/contact_mail.html.erb within layouts/mailer (0.6ms)
+  Rendering user_mailer/contact_mail.text.erb within layouts/mailer
+  Rendered user_mailer/contact_mail.text.erb within layouts/mailer (0.3ms)
+UserMailer#contact_mail: processed outbound mail in 282.8ms
+Sent mail to kelvin.ca91@gmail.com (138.5ms)
+Date: Sat, 23 Jul 2016 22:48:27 +0000
+From: from@example.com
+To: kelvin.ca91@gmail.com
+Message-ID: <5793f43b40986_4403217157c3831f@robertcruzolivera2016-proyectotuparqueo-3557739.mail>
+Subject: =?UTF-8?Q?Cont=C3=A1ctanos_Web?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5793f43b3cbbe_4403217157c3827c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5793f43b3cbbe_4403217157c3827c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#contact_mail
+
+Hi, find me in app/views/user_mailer/contact_mail.text.erb
+
+
+----==_mimepart_5793f43b3cbbe_4403217157c3827c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#contact_mail</h1>
+
+<p>
+  Hi, find me in app/views/user_mailer/contact_mail.html.erb
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_5793f43b3cbbe_4403217157c3827c--
+
+Completed 500 Internal Server Error in 1121ms (ActiveRecord: 0.0ms)
+
+
+  
+Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+  
+app/controllers/home_controller.rb:23:in `mailcontact'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.4ms)
+Started GET "/" for 200.0.118.173 at 2016-08-02 00:39:08 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (772.0ms)
+Completed 200 OK in 990ms (Views: 961.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-08-02 00:39:15 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 163ms (Views: 160.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/about" for 200.0.118.173 at 2016-08-02 00:39:53 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 193ms (Views: 189.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/contact" for 200.0.118.173 at 2016-08-02 00:40:02 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#contact as HTML
+  Rendering home/contact.html.erb within layouts/application
+  Rendered home/contact.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 91ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-08-02 00:40:05 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 186ms (Views: 183.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-08-02 00:56:06 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 152ms (Views: 150.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2016-08-02 00:56:10 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (97.8ms)
+Completed 200 OK in 322ms (Views: 277.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2016-08-02 00:56:18 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 99ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 200.0.118.173 at 2016-08-02 00:56:22 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 306ms (Views: 304.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 200.0.118.173 at 2016-08-02 00:56:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YUquGosOB1/lTvjAIzpmPGodpgAPYavxBxI7QlOH+SaKjaMavcRxxxrzpnW+fcgC+Thk4eaOz9P/RRAcgm8lvA==", "user"=>{"nombre"=>"Robert Cruz", "email"=>"robcrolivera@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrar"}
+Unpermitted parameter: nombre
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'robcrolivera@hotmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`, `email`, `encrypted_password`) VALUES ('2016-08-02 00:56:56', '2016-08-02 00:56:56', 'robcrolivera@hotmail.com', '$2a$11$kNKADuW8R7.PYEg85TxQT..JEt1uTIEMBaW1CMXmt60Aeo2phk4.C')[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2016-08-02 00:56:56', `last_sign_in_at` = '2016-08-02 00:56:56', `current_sign_in_ip` = '200.0.118.173', `last_sign_in_ip` = '200.0.118.173' WHERE `users`.`id` = 1[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://proyectotuparqueo-robertcruzolivera2016.c9users.io/
+Completed 302 Found in 310ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-08-02 00:56:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 116ms (Views: 113.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-02 00:57:31 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 404 Not Found in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  
+app/controllers/home_controller.rb:16:in `account'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.8ms)
+Started GET "/" for 200.0.118.173 at 2016-08-02 00:57:55 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (97.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 242ms (Views: 239.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 200.0.118.173 at 2016-08-02 00:58:00 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xf/rvd7L53zzeoGh2DAZJC8ZD9NCCMnpgcJM5S8Pimap7noO3MxDe21Uw1DDmJAARy4mybG16/uLCvcL/NlASg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://proyectotuparqueo-robertcruzolivera2016.c9users.io/
+Completed 302 Found in 203ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-08-02 00:58:00 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 149ms (Views: 145.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2016-08-02 00:58:04 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 152ms (Views: 149.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 200.0.118.173 at 2016-08-02 00:58:09 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tVQDff2h0kIdzoXuYxKyUci7/iZCUVl8j91MxqSUfD2CUiRRB34sYquWHumHeScwfj5maBnpuLbpDAFPTB2IyQ==", "user"=>{"email"=>"robcrolivera@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'robcrolivera@hotmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `users` SET `remember_created_at` = '2016-08-02 00:58:09', `updated_at` = '2016-08-02 00:58:09' WHERE `users`.`id` = 1[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 2, `current_sign_in_at` = '2016-08-02 00:58:09' WHERE `users`.`id` = 1[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://proyectotuparqueo-robertcruzolivera2016.c9users.io/
+Completed 302 Found in 326ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-08-02 00:58:09 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 112ms (Views: 108.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-02 00:58:16 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=3):
+  
+app/controllers/home_controller.rb:16:in `account'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (122.9ms)
