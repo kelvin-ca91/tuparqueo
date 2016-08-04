@@ -1,3 +1,6 @@
+<% content_for :stylesheets do %>
+<%= stylesheet_link_tag 'detail_parking' %>
+<% end %>
 <div class="container">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -174,3 +177,7 @@
   	</div>
   </div>
 </div>
+
+<% content_for :javascript do %>
+<%= javascript_include_tag 'detail_parking' %>
+<% end %>
