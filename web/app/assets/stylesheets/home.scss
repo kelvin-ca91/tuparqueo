@@ -1,0 +1,21 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#list-thumbnail a{
+    color: #000;
+    text-decoration: none;
+}
+.hero {
+    background: image-url('parking-cover.jpg');
+    width: 100%;
+    padding: 15% 0px 15% 0px;
+    text-align: center;
+    margin-bottom: 30px;
+    background-size: cover;
+}
+ 
+.hero h1 {
+    color: #fff;
+    font-size: 3em;
+}

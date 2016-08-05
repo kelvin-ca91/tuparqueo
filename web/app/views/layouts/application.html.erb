@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Latest compiled and minified CSS -->
+    <%= yield :stylesheets %>
+    
+  </head>
+
+  <body>
+    <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <!-- titulo -->
+            </h4>
+          </div>
+          <div class="modal-body">
+            <!-- Body -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <!--<button type="button" class="btn btn-primary">Guardar</button>-->
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">TuParqueo.com</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to 'Home', root_path %></li>
+              <li><%= link_to 'Nosotros', home_about_path %></li>
+              
+              <!--<li><a href="/home/testimonio">Testimonios</a></li>-->
+              <li><%= link_to 'Contáctanos', home_contact_path %></li>
+              <% if current_user %>
+                <li class="dropdown">
+                  <span class="hidden" id="userId"><%= current_user.id %></span>
+                  <a href="#" id="image-profile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <%= image_tag('profiles/user1_profile.jpg', :class =>'img-responsive img-circle') %>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to 'Mi cuenta', home_account_path %></li>
+                    <li role="separator" class="divider"></li>
+                    <li><%= link_to 'Cerrar Sessión', destroy_user_session_path, :method => 'DELETE' %></a></li>
+                  </ul>
+                </li>
+              <% else %>
+                <li class="dropdown">
+                  <a href="#" id="image-profile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    
+                    <%= image_tag('profile-default.png', :class =>'img-responsive img-circle') %>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to 'Iniciar Sesión', new_user_session_path %></li>
+                    <li><%= link_to 'Registrarse', new_user_registration_path  %></li>
+                  </ul>
+                </li>
+              <% end %>
+              
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header><!-- /header -->
+    <main>
+      <%= yield %>
+      
+    </main>
+      
+    <footer>
+      <div class="container">
+        <div class="pull-left">
+          © TuParqueo.com - Todos los derechos reservados.
+        </div>
+        <div class="text-right">
+          <a class="fa-stack fa-lg" href="#">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </a>
+          <a class="fa-stack fa-lg" href="#">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </a>
+          <a class="fa-stack fa-lg" href="#">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-x4abpPKgWqMUx5-q5Qsg7jaa4yfwPAg	
+&v=3.exp"></script>
+    
+    <%= yield :javascript %>
+  </body>
+</html>
