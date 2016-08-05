@@ -49,6 +49,7 @@ $(document).ready(function(){
         dataType: 'html',
         success: function(data){
           $this.parent().parent().remove();
+          $('#parking-cant').html( $('#parking-cant').html()-1 );
         }
       });
     }

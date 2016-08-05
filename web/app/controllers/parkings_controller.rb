@@ -10,11 +10,13 @@ class ParkingsController < ApplicationController
     
     def new
         @parking = Parking.new
+        @district = District.all
         render '_form_parking', layout: 'blank'
     end
     
     def edit
         @parking = Parking.find(params[:id])
+        @district = District.all
         render '_form_parking', layout: 'blank'
     end
     
@@ -28,7 +30,9 @@ class ParkingsController < ApplicationController
     end
     
     def destroy
-        Parking.find(params[:id]).destroy
+        parking = Parking.find_by(id: params[:id])
+        parking.update(estado: 0)
+        # Parking.find(params[:id]).destroy
     end
     
     def create
@@ -44,7 +48,7 @@ class ParkingsController < ApplicationController
     
     private
     def parking_params
-        params.require(:parking).permit(:titulo, :descripcion, :costo_dia, :costo_mes, :costo_anho, :latitud, :longitud, :direccion )
+        params.require(:parking).permit(:titulo, :descripcion, :costo_dia, :costo_mes, :costo_anho, :latitud, :longitud, :direccion, :districts_id )
     end
     
 end
