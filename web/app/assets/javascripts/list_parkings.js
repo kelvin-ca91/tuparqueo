@@ -5,9 +5,9 @@ $(document).ready(function() {
   // Evento cuando se agrega o desagrega de favoritos
   $('.icon-favorite').on('click', function(){
     var $this = $(this);
-    if( $this.hasClass('fa-star-o') ){
+    if( $this.hasClass('fa-heart-o') ){
       
-      $this.removeClass('fa-star-o').addClass('fa-star');
+      $this.removeClass('fa-heart-o').addClass('fa-heart');
       $.ajax({
         url: '../favorites',
         method: 'POST',
@@ -17,9 +17,9 @@ $(document).ready(function() {
         }
       });
     }else{
-      $this.removeClass('fa-star').addClass('fa-star-o');
+      $this.removeClass('fa-heart').addClass('fa-heart-o');
       $.ajax({
-        url: '../favorites/',
+        url: '../favorites/1',
         method: 'DELETE',
         data: {parkingId: $this.attr('data-id'), userId: $('#userId').html() },
         success:function(){
