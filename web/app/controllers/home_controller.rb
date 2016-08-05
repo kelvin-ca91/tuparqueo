@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @district = District.all
   end
   
   def about

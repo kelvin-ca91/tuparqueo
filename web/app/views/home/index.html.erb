@@ -1,27 +1,29 @@
 <% content_for :stylesheets do %>
 <%= stylesheet_link_tag 'home' %>
 <% end %>
+
+
 <div class="hero">
   <h1>TuParqueo.com en:</h1>
-  <form class="form-inline" method="GET" action="parkings">
+  <%= form_tag("/parkings", method: "get", class: 'form-inline') do %>
+  
     <div class="form-group">
-      <input type="text" class="form-control" id="" placeholder="Dirección">
+      <%= text_field_tag( :direccion) %>
     </div>
+    
     <div class="form-group">
-      <input type="date" class="form-control" id="fechaInicio" placeholder="Fecha Inicio">
+      
+      <%= select("distrito",'id' ) do %>
+        <% @district.each do |district| %>
+          <%= content_tag(:option, district.nombre, value: district.id) %>
+        <% end %>
+      <% end %>
     </div>
+    
     <div class="form-group">
-      <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+      <%= submit_tag("Buscar", class: 'btn btn-success') %>
     </div>
-    <div class="form-group">
-      <select id="district" class="form-control">
-        <option>San Isidro</option>
-        <option>Surco</option>
-        <option>San Miguel</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-success">Buscar</button>
-  </form>
+  <% end %>
   <br>
   </br>
 </div>

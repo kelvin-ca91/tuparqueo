@@ -2946,3 +2946,493 @@ Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (8.5ms)
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
 Completed 200 OK in 79ms (Views: 76.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5295678035381066865', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateFavorites (20160726021510)
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE `favorites` (`id` int AUTO_INCREMENT PRIMARY KEY, `users_id` int, `parkings_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160726021510')[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLatitudlongitudToParkings (20160801195956)
+  [1m[35m (20.3ms)[0m  [1m[35mALTER TABLE `parkings` ADD `latitud` varchar(255)[0m
+  [1m[35m (20.6ms)[0m  [1m[35mALTER TABLE `parkings` ADD `longitud` varchar(255)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160801195956')[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRentals (20160801212656)
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE `rentals` (`id` int AUTO_INCREMENT PRIMARY KEY, `users_id` int, `parkings_id` int, `fecha_inicio` date, `fecha_fin` date, `monto` decimal, `cant_tiempo` int, `tiempo` varchar(255), `estado` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160801212656')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDireccionestadodistritoToParkings (20160801213055)
+  [1m[35m (20.4ms)[0m  [1m[35mALTER TABLE `parkings` ADD `direccion` varchar(255)[0m
+  [1m[35m (19.1ms)[0m  [1m[35mALTER TABLE `parkings` ADD `districts_id` int[0m
+  [1m[35m (18.2ms)[0m  [1m[35mALTER TABLE `parkings` ADD `estado` int[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160801213055')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDistricts (20160804072314)
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE `districts` (`id` int AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `lat_centro` varchar(255), `lon_centro` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160804072314')[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5295678035381066865')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (1.3ms)[0m  [1m[35mSHOW CREATE TABLE `districts`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'districts'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `favorites`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `parkings`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'parkings'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `rentals`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'rentals'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'districts'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'favorites'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'parkings'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'rentals'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'web_tuparqueo'
+  AND fk.table_name = 'users'
+[0m
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:06:35 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5391.2ms)
+Completed 200 OK in 5694ms (Views: 5657.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:09:02 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.7ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (259.7ms)
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00000004eac2f8>:0x007f5ded9143b0>):
+    14:       <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+    15:     </div>
+    16:     <div class="form-group">
+    17:       <%= f.select(:districts_id,[],{}, { :class => "form-control"} ) do %>
+    18:         <% @district.each do |district| %>
+    19:           <%= content_tag(:option, district.nombre, value: district.id) %>
+    20:         <% end %>
+  
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb___4184989567651478069_70020697204420'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.6ms)
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:09:23 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 143ms (Views: 140.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:09:54 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 118ms (Views: 115.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:10:28 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 139ms (Views: 136.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:10:39 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 86ms (Views: 84.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:10:47 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 96ms (Views: 93.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:11:09 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 115ms (Views: 112.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings?districts_id%5B%7B%3Aclass%3D%3E%22form-control%22%7D%5D=26" for 181.64.14.246 at 2016-08-05 08:11:46 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"districts_id"=>{"{:class=>\"form-control\"}"=>"26"}}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 166ms (Views: 153.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:12:31 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..5)):
+    14:       <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+    15:     </div>
+    16:     <div class="form-group">
+    17:       <%= select(:districts_id ) do %>
+    18:         <% @district.each do |district| %>
+    19:           <%= content_tag(:option, district.nombre, value: district.id) %>
+    20:         <% end %>
+  
+app/views/home/index.html.erb:17:in `_app_views_home_index_html_erb___4184989567651478069_70020964844580'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (95.7ms)
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:12:45 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 90ms (Views: 87.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parkings?districts_id%5B%5B%5D%5D=1" for 181.64.14.246 at 2016-08-05 08:12:48 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"districts_id"=>nil}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 136ms (Views: 133.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:14:31 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 107ms (Views: 104.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:14:57 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.6ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 227ms (Views: 222.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings?utf8=%E2%9C%93&q=asas&commit=Search" for 181.64.14.246 at 2016-08-05 08:15:02 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"asas", "commit"=>"Search"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 248ms (Views: 244.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parkings?utf8=%E2%9C%93&q=asas&commit=Search" for 181.64.14.246 at 2016-08-05 08:15:41 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"asas", "commit"=>"Search"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 96ms (Views: 93.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:15:43 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:18:51 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (223.2ms)
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00000004eac2f8>:0x007f5e1634fd70>):
+    17:     
+    18:     <div class="form-group">
+    19:       
+    20:       <%= f.select(:districts_id,[],{}, { :class => "form-control"} ) do %>
+    21:         <% @district.each do |district| %>
+    22:           <%= content_tag(:option, district.nombre, value: district.id) %>
+    23:         <% end %>
+  
+app/views/home/index.html.erb:20:in `block in _app_views_home_index_html_erb___4184989567651478069_70021038130460'
+app/views/home/index.html.erb:12:in `_app_views_home_index_html_erb___4184989567651478069_70021038130460'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (127.0ms)
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:19:01 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 105ms (Views: 101.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:19:32 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 214ms (Views: 211.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:20:00 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 90ms (Views: 88.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:20:13 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 213ms (Views: 209.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:20:29 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 96ms (Views: 93.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:20:47 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:21:05 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 98ms (Views: 95.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:21:25 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2..5)):
+    13:     
+    14:     <div class="form-group">
+    15:       
+    16:       <%= select(:districts_id ) do %>
+    17:         <% @district.each do |district| %>
+    18:           <%= content_tag(:option, district.nombre, value: district.id) %>
+    19:         <% end %>
+  
+app/views/home/index.html.erb:16:in `block in _app_views_home_index_html_erb___4184989567651478069_70020960513440'
+app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb___4184989567651478069_70020960513440'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.8ms)
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:21:33 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 227ms (Views: 224.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parkings?utf8=%E2%9C%93&direccion=aaa&districts_id%5B%5B%5D%5D=2&commit=Buscar" for 181.64.14.246 at 2016-08-05 08:21:40 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "direccion"=>"aaa", "districts_id"=>nil, "commit"=>"Buscar"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 100ms (Views: 96.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parkings?utf8=%E2%9C%93&direccion=aaa&districts_id%5B%5B%5D%5D=2&commit=Buscar" for 181.64.14.246 at 2016-08-05 08:25:49 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "direccion"=>"aaa", "districts_id"=>nil, "commit"=>"Buscar"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 132ms (Views: 129.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:25:53 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 128ms (Views: 124.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings?utf8=%E2%9C%93&direccion=nmm&post%5Bdistricts_id%5D=1&commit=Buscar" for 181.64.14.246 at 2016-08-05 08:26:01 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "direccion"=>"nmm", "post"=>{"districts_id"=>"1"}, "commit"=>"Buscar"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 100ms (Views: 96.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/parkings?utf8=%E2%9C%93&direccion=nmm&post%5Bdistricts_id%5D=1&commit=Buscar" for 181.64.14.246 at 2016-08-05 08:26:48 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "direccion"=>"nmm", "post"=>{"districts_id"=>"1"}, "commit"=>"Buscar"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 104ms (Views: 101.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:26:51 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 90ms (Views: 87.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parkings?utf8=%E2%9C%93&direccion=nmm&distrito%5Bid%5D=1&commit=Buscar" for 181.64.14.246 at 2016-08-05 08:27:00 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "direccion"=>"nmm", "distrito"=>{"id"=>"1"}, "commit"=>"Buscar"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 [0m
+  Rendering parkings/index.html.erb within layouts/application
+  Rendered parkings/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 217ms (Views: 213.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-05 08:27:46 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 151ms (Views: 147.4ms | ActiveRecord: 0.4ms)
+
+
