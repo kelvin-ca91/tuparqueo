@@ -5,16 +5,22 @@
   <div class="navbar-search text-center">
     <form class="form-inline" method="GET" action="/parkings">
       <div class="form-group">
-        <input type="text" name="direccion" class="form-control" placeholder ="Direccion" />
+        <input type="text" name="direccion" value="<%= params[:direccion] %>" class="form-control" placeholder ="Direccion" />
       </div>
       
       <div class="form-group">
         <select class="form-control" name="distrito">
           <option value="0">:: Todos ::</option>
           <% @district.each do |district| %>
-            <option value="<%= district.id %>">
-              <%= district.nombre %>
-            </option>
+            <% if district.id == params[:distrito] %>
+              <option value="<%= district.id %>" selected>
+                <%= district.nombre %>
+              </option>
+            <% else %>
+              <option value="<%= district.id %>">
+                <%= district.nombre %>
+              </option>
+            <% end %>
           <% end %>
         </select>
       </div>
@@ -25,11 +31,11 @@
     </form>
   </div>
   
-  <div class="">
-    <input type="text" id="lat_centro" value="<%= @district_search.lat_centro %>" />
-    <input type="text" id="lon_centro" value="<%= @district_search.lon_centro %>"/>
-    <input type="text" id="district_id" value="<%= params[:distrito] %>"/>
-  </div>
+  
+  <input type="hidden" id="lat_centro" value="<%= @district_search.lat_centro %>" />
+  <input type="hidden" id="lon_centro" value="<%= @district_search.lon_centro %>"/>
+  <input type="hidden" id="district_id" value="<%= params[:distrito] %>"/>
+  
   
   
   <div class="row">
@@ -85,8 +91,8 @@
               </div>
             </div>
             </a>
-            <input type="text" class="latitud" value="<%= park.latitud %>" />
-            <input type="text" class="longitud" value="<%= park.longitud %>"/>
+            <input type="hidden" class="latitud" value="<%= park.latitud %>" />
+            <input type="hidden" class="longitud" value="<%= park.longitud %>"/>
           </div>
         <% end %>
       <% end %>

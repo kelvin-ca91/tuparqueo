@@ -54,7 +54,7 @@ var initialize = function(){
       });
       
       google.maps.event.addListener(marker, 'click', function (e) {
-        infoWindow.setContent($this.find('.titulo').html()+'<br>'+$this.find('.direccion').html());
+        infoWindow.setContent('<strong>Titulo: '+$this.find('.titulo').html()+'</strong><br>Dirección: '+$this.find('.direccion').html());
         infoWindow.open(map, marker);
         $('#list-search .col-principal').removeClass('active');
         $this.addClass('active');
