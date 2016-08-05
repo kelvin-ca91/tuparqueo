@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class='col-md-10 col-sm-offset-1 '>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          Contáctenos
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div id="div-mapa" style="height:350px" class="col-md-7">
+              
+            </div>
+            
+            <div class="col-md-5">
+              <%= form_tag home_mailcontact_path, method: :post do %>
+                <div class="form-group">
+                  <%= label_tag 'nombres' %>
+                  <%= text_field_tag 'nombres', params[:nombres], class: 'form-control', placeholder:'Nombres y Apellidos' %>
+                </div>
+                
+                <div class="form-group">
+                  <%= label_tag 'teléfono' %>
+                  <%= text_field_tag 'telefono', params[:telefono], class: 'form-control', placeholder: 'Teléfono' %>
+                </div>
+                <div class="form-group">
+                  <%= label_tag 'mensaje' %>
+                  <%= text_area_tag 'mensaje', params[:mensaje], class: 'form-control', placeholder: 'Mensaje' %>
+                </div>
+                  
+                <div class="form-group">
+                  <%= button_tag 'Enviar', class: 'btn btn-primary form-control' %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :javascript do %>
+<%= javascript_include_tag 'contact' %>
+<% end %>
