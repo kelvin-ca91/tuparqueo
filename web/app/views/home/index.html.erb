@@ -12,6 +12,7 @@
     
     <div class="form-group">
       <select class="form-control" name="distrito">
+        <option value="0">:: Todos ::</option>
         <% @district.each do |district| %>
           <option value="<%= district.id %>">
             <%= district.nombre %>

@@ -10,6 +10,7 @@
       
       <div class="form-group">
         <select class="form-control" name="distrito">
+          <option value="0">:: Todos ::</option>
           <% @district.each do |district| %>
             <option value="<%= district.id %>">
               <%= district.nombre %>
@@ -24,6 +25,13 @@
     </form>
   </div>
   
+  <div class="">
+    <input type="text" id="lat_centro" value="<%= @district_search.lat_centro %>" />
+    <input type="text" id="lon_centro" value="<%= @district_search.lon_centro %>"/>
+    <input type="text" id="district_id" value="<%= params[:distrito] %>"/>
+  </div>
+  
+  
   <div class="row">
     <div class="col-sm-7" style="height:550px" id="div-mapa">
       
@@ -32,7 +40,7 @@
       <%
       if @parking 
         @parking.each do |park| %>
-          <div class="row">    
+          <div class="row col-principal">    
             <div class="col-sm-5">
               <div class="content-params-parkings">
                 <i data-favorite-id="<%= park.favorite_id %>" class="fa <% if park.favorite_id  %>fa-heart <% else %> fa-heart-o<% end %> icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
@@ -45,11 +53,11 @@
               <div class="col-sm-7 text-justify">
               <div>
                 <label><strong>Título:</strong></label>
-                <span><%= park.titulo %></span>
+                <span class="titulo"><%= park.titulo %></span>
               </div>
               <div>
-                <label for=""><strong>Dirección:</strong></label>
-                <span class="">Calle Londres #361...</span>
+                <label><strong>Dirección:</strong></label>
+                <span class="direccion">Calle Londres #361...</span>
               </div>
               <div>
                 <label for=""><strong>Descripción:</strong></label>
@@ -77,8 +85,9 @@
               </div>
             </div>
             </a>
-          </a>
-        </div>
+            <input type="text" class="latitud" value="<%= park.latitud %>" />
+            <input type="text" class="longitud" value="<%= park.longitud %>"/>
+          </div>
         <% end %>
       <% end %>
     </div>

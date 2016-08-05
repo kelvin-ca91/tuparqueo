@@ -1,8 +1,16 @@
 class ParkingsController < ApplicationController
     def index
         @district = District.all
-        @parking = Parking.find_by(districts_id: params[:distrito])
-        #@parking = Parking.find_by_sql("SELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 ")
+        # @parking = Parking.find_by(districts_id: params[:distrito])
+        if params[:distrito].empty? == false && params[:distrito] !='0'
+            @parking = Parking.find_by_sql("SELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND districts_id = #{params[:distrito]}")
+            @district_search = District.find_by(id: params[:distrito])
+        else
+            @parking = Parking.find_by_sql("SELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1")
+            @district_search = District.first
+        end
+        
+        
     end
     # 
     
