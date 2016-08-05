@@ -1,0 +1,87 @@
+<% content_for :stylesheets do %>
+<%= stylesheet_link_tag 'parkings' %>
+<% end %>
+<div class="container-fluid">
+  <div class="navbar-search text-center">
+    <form class="form-inline" method="GET" action="search">
+      <div class="form-group">
+        <input type="text" class="form-control" id="" placeholder="Dirección">
+      </div>
+      <div class="form-group">
+        <input type="date" class="form-control" id="fechaInicio" placeholder="Fecha Inicio">
+      </div>
+      <div class="form-group">
+        <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+      </div>
+      <div class="form-group">
+        <select id="district" class="form-control">
+          <option>San Isidro</option>
+          <option>Surco</option>
+          <option>San Miguel</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success">Buscar</button>
+    </form>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-7" style="height:550px" id="div-mapa">
+      
+    </div>
+    <div class="col-sm-5" id="list-search">
+      <%
+      @parking.each do |park| %>
+        <div class="row">    
+            <div class="col-sm-5">
+              <div class="content-params-parkings">
+                <i data-favorite-id="<%= park.favorite_id %>" class="fa <% if park.favorite_id  %>fa-heart <% else %> fa-heart-o<% end %> icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+              </div>
+              <a href="<%= parking_path( park.id ) %>">
+                <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+              </a>
+            </div>
+            <a href="<%= parking_path( park.id ) %>">
+              <div class="col-sm-7 text-justify">
+              <div>
+                <label><strong>Título:</strong></label>
+                <span><%= park.titulo %></span>
+              </div>
+              <div>
+                <label for=""><strong>Dirección:</strong></label>
+                <span class="">Calle Londres #361...</span>
+              </div>
+              <div>
+                <label for=""><strong>Descripción:</strong></label>
+                <span> <%= truncate( park.descripcion, :length =>100 ) %> </span>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 text-center">
+                  <strong>Día </strong>
+                  <p>
+                    S/. <%= park.costo_dia %>
+                  </p>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <strong>Mes </strong>
+                  <p>
+                    S/. <%= park.costo_mes %>
+                  </p>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <strong>Año </strong>
+                  <p>
+                    S/. <%= park.costo_anho %>
+                  </p>
+                </div>
+              </div>
+            </div>
+            </a>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>  
+<% content_for :javascript do %>
+<%= javascript_include_tag 'list_parkings' %>
+<% end %>
