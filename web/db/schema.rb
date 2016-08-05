@@ -30,11 +30,12 @@ ActiveRecord::Schema.define(version: 20160804072314) do
   create_table "parkings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "titulo"
     t.text     "descripcion",  limit: 65535
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.float    "costo_dia",    limit: 53
-    t.float    "costo_mes",    limit: 53
-    t.float    "costo_anho",   limit: 53
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.integer  "users_id"
+    t.decimal  "costo_dia",                  precision: 10
+    t.decimal  "costo_mes",                  precision: 10
+    t.decimal  "costo_anho",                 precision: 10
     t.string   "latitud"
     t.string   "longitud"
     t.string   "direccion"

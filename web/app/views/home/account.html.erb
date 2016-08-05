@@ -57,7 +57,16 @@
               <th class='col-md-3'>Dirección</th>
               <th class='col-md-2'></th>
             </tr>
-            
+            <% @rentals.each do |rentals| %>
+              <tr><%= rentals.titulo %></tr>
+              <td><%= truncate(rentals.descripcion, :length => 100) %></td>
+              <td><%= truncate(rentals.direccion, :length => 100) %></td>
+              <td class="text-center">
+                <button type="button" data-id="<%= rentals.rentals_id %>" class="btn btn-danger btn-delete-rentals">
+                  <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+              </td>
+            <% end %>
           </table>
         </div>
       </div>
