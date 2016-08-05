@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
-  
   resources :parkings
+  resources :favorites
+  resources :rentals
 
   devise_for :users , :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :omniauth_authorize => 'users/omniauth_authorize' }
   

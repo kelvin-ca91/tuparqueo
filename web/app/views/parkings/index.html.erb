@@ -1,45 +1,69 @@
+<% content_for :stylesheets do %>
+<%= stylesheet_link_tag 'parkings' %>
+<% end %>
 <div class="container-fluid">
   <div class="navbar-search text-center">
-    <form class="form-inline" method="GET" action="search">
+    <form class="form-inline" method="GET" action="/parkings">
       <div class="form-group">
-        <input type="text" class="form-control" id="" placeholder="Dirección">
+        <input type="text" name="direccion" value="<%= params[:direccion] %>" class="form-control" placeholder ="Direccion" />
       </div>
+      
       <div class="form-group">
-        <input type="date" class="form-control" id="fechaInicio" placeholder="Fecha Inicio">
-      </div>
-      <div class="form-group">
-        <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
-      </div>
-      <div class="form-group">
-        <select id="district" class="form-control">
-          <option>San Isidro</option>
-          <option>Surco</option>
-          <option>San Miguel</option>
+        <select class="form-control" name="distrito">
+          <option value="0">:: Todos ::</option>
+          <% @district.each do |district| %>
+            <% if district.id == params[:distrito] %>
+              <option value="<%= district.id %>" selected>
+                <%= district.nombre %>
+              </option>
+            <% else %>
+              <option value="<%= district.id %>">
+                <%= district.nombre %>
+              </option>
+            <% end %>
+          <% end %>
         </select>
       </div>
-      <button type="submit" class="btn btn-success">Buscar</button>
+      
+      <div class="form-group">
+        <button class="btn btn-success">Buscar</button>
+      </div>
     </form>
   </div>
+  
+  
+  <input type="hidden" id="lat_centro" value="<%= @district_search.lat_centro %>" />
+  <input type="hidden" id="lon_centro" value="<%= @district_search.lon_centro %>"/>
+  <input type="hidden" id="district_id" value="<%= params[:distrito] %>"/>
+  
+  
   
   <div class="row">
     <div class="col-sm-7" style="height:550px" id="div-mapa">
       
     </div>
     <div class="col-sm-5" id="list-search">
-      <% @parking.each do |park| %>
-        <div class="row">
-          <a href="<%= parking_path( park.id ) %>">
+      <%
+      if @parking 
+        @parking.each do |park| %>
+          <div class="row col-principal">    
             <div class="col-sm-5">
-               <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+              <div class="content-params-parkings">
+                <i data-favorite-id="<%= park.favorite_id %>" class="fa <% if park.favorite_id  %>fa-heart <% else %> fa-heart-o<% end %> icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
+              </div>
+              <a href="<%= parking_path( park.id ) %>">
+                <%= image_tag 'parqueo1.jpg' , :class=> 'img-responsive'%>
+              </a>
             </div>
-            <div class="col-sm-7 text-justify">
+            <a href="<%= parking_path( park.id ) %>">
+              <div class="col-sm-7 text-justify">
               <div>
                 <label><strong>Título:</strong></label>
-                <span><%= park.titulo %></span>
+                <span class="titulo"><%= park.titulo %></span>
               </div>
               <div>
-                <label for=""><strong>Dirección:</strong></label>
-                <span class="">Calle Londres #361...</span>
+                <label><strong>Dirección:</strong></label>
+                <span class="direccion"><%= park.direccion %></span>
               </div>
               <div>
                 <label for=""><strong>Descripción:</strong></label>
@@ -66,12 +90,15 @@
                 </div>
               </div>
             </div>
-          </a>
-        </div>
+            </a>
+            <input type="hidden" class="latitud" value="<%= park.latitud %>" />
+            <input type="hidden" class="longitud" value="<%= park.longitud %>"/>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
 </div>  
-<script>
-  var parking = true;
-</script>
+<% content_for :javascript do %>
+<%= javascript_include_tag 'list_parkings' %>
+<% end %>

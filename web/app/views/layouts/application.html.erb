@@ -4,10 +4,12 @@
     <title>Web</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Latest compiled and minified CSS -->
+    <%= yield :stylesheets %>
+    
   </head>
 
   <body>
-    
     <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -54,6 +56,7 @@
               <li><%= link_to 'Contáctanos', home_contact_path %></li>
               <% if current_user %>
                 <li class="dropdown">
+                  <span class="hidden" id="userId"><%= current_user.id %></span>
                   <a href="#" id="image-profile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <%= image_tag('profiles/user1_profile.jpg', :class =>'img-responsive img-circle') %>
                   </a>
@@ -83,6 +86,7 @@
     </header><!-- /header -->
     <main>
       <%= yield %>
+      
     </main>
       
     <footer>
@@ -107,7 +111,9 @@
       </div>
     </footer>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-x4abpPKgWqMUx5-q5Qsg7jaa4yfwPAg	
+&v=3.exp"></script>
     
+    <%= yield :javascript %>
   </body>
 </html>

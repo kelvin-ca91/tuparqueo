@@ -50,15 +50,31 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { :host => 'smtp.gmail.com' }
   config.action_mailer.delivery_method = :smtp
   # config.action_mailer.perform_deliveries = true
-  config.action_mailer.smtp_settings = {
-      address:              'smtp.gmail.com',
-      port:                 587,
-      domain:               'kelvincarrion.com',
-      enable_starttls_auto: true,
-      user_name:            'kelvin.ca91@gmail.com',
-      password:             '',
-      authentication:       'plain'
-    }
+  
+  #config.action_mailer.smtp_settings = {
+  #    address:              "yungay.yachay.pe",
+  #   port:                 465,
+  #    domain:               'i-net.pe',
+  #    user_name:            'jonathan.sucasaca@i-net.pe',
+  #    password:             'Jonathan92',
+  #    authentication:       "plain",
+  #    enable_starttls_auto: true
+  #  }
+  
+  ActionMailer::Base.smtp_settings = {
+  :address => "smtp.sendgrid.net",
+  :port => 2525,
+  :domain => "proyecto-dos-jona2016.c9users.i",
+  :user_name => "jonathan.sucasaca",
+  :password => "Jonathan92",
+  :authentication => :plain,
+  :enable_starttls_auto => true,
+  :ssl =>false
+  }
+  
+  config.action_mailer.default_url_options = {host: "proyecto-dos-jona2016.c9users.io"}
+  
+  config.action_mailer.perform_deliveries = true
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

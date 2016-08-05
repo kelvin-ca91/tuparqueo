@@ -3,6 +3,15 @@
     <%= f.label :titulo, 'Título:', :class =>'control-form' %>
     <%= f.text_field :titulo, :class =>'form-control' %>
   </div>
+  <div class="form-group">
+    <%= f.label :disctrict_id, 'Distrito', :class => 'control-form' %>
+    
+    <%= f.select(:districts_id,[],{}, { :class => "form-control"} ) do %>
+      <% @district.each do |district| %>
+        <%= content_tag(:option, district.nombre, value: district.id) %>
+      <% end %>
+    <% end %>
+  </div>
   <div class="row">
     <div class="col-md-4">
       <div class="form-group">
@@ -25,9 +34,107 @@
   </div>
   <div class="form-group">
     <%= f.label :descripcion, 'Descripción: ', :class =>'control-form' %>
-    <%= f.text_area :descripcion, :class =>'form-control', :rows =>10 %>  
+    <%= f.text_area :descripcion, :class =>'form-control', :rows =>5 %>  
   </div>
+  <div class="form-group">
+    <%= f.label :direccion, 'Dirección: ', :class =>'control-form' %>
+    <%= f.text_field :direccion, :class => 'form-control', :readonly => true %>
+    <div id="mapa-direccion" style="width:100%; height:300px;"></div>
+    <%= f.text_field :latitud, :class => 'hidden' %>
+    <%= f.text_field :longitud, :class => 'hidden' %>
+  </div>
+  
+  
   <div class="form-group">
     <%= f.submit 'Guardar', :class =>'form-control btn btn-success' %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  var cliente, geocoder;
+  
+  var initialize = function(){
+    var latInit = ($.trim($('#parking_latitud').val()))?$.trim($('#parking_latitud').val()):-12.081792;
+    var lonInit = ($.trim($('#parking_longitud').val()))?$.trim($('#parking_longitud').val()):-77.017936;
+    geocoder = new google.maps.Geocoder();
+    var mapOptions = {
+        zoom : 16,
+        center: new google.maps.LatLng(latInit, lonInit)
+    }
+    var map = new google.maps.Map(document.getElementById('mapa-direccion'), mapOptions);
+    if($.trim($('#parking_latitud').val())){
+      console.log(latInit, lonInit);
+      var latLng = new google.maps.LatLng(latInit, lonInit);
+      cliente = new google.maps.Marker({
+            position: latLng,
+            map: map,
+            title: 'Punto de Origen',
+            // icon: icono,
+            draggable: true
+        });
+    }
+    
+    
+    
+
+    google.maps.event.addListener(map, "click", function (event) {
+        latOrigen = event.latLng.lat();
+        lonOrigen = event.latLng.lng();
+        var latLng = new google.maps.LatLng(latOrigen, lonOrigen);
+        if(cliente)
+          cliente.setMap(null);
+        
+        // var icono = '../img/cliente.png';
+
+        obtenerDireccion(latOrigen, lonOrigen);
+        $("#parking_latitud").val(latOrigen);
+        $("#parking_longitud").val(lonOrigen);
+        
+        cliente = new google.maps.Marker({
+            position: latLng,
+            map: map,
+            title: 'Punto de Origen',
+            // icon: icono,
+            draggable: true
+        });
+
+        google.maps.event.addListener(cliente, "dragend", function (event) {
+            latOrigen = event.latLng.lat();
+            lonOrigen = event.latLng.lng();
+            obtenerDireccion(latOrigen, lonOrigen);
+            $("#parking_latitud").val(latOrigen);
+            $("#parking_longitud").val(lonOrigen);
+        });
+    });
+  }
+  
+  var obtenerDireccion = function (lat, lon) {
+    var latLng = new google.maps.LatLng(lat, lon);
+    geocoder.geocode({'latLng': latLng}, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            if (results[0]) {
+                var address = results[0].formatted_address;
+                console.log(address, '1');
+                if (address.indexOf(',') != -1) {
+                    var add = address.split(',');
+                    address = add[0];
+                }
+                $("#parking_direccion").val(address);
+            }
+        } else {
+            console.log("No se pudo obtener la dirección");
+        }
+    });
+    
+  }
+  
+  $(document).ready(function() {
+    // Inicia Google maps
+    
+    setTimeout(function() {
+    initialize();
+      
+    }, 2000);
+      
+  });
+</script>
