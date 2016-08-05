@@ -30,8 +30,9 @@
     </div>
     <div class="col-sm-5" id="list-search">
       <%
-      @parking.each do |park| %>
-        <div class="row">    
+      if @parking 
+        @parking.each do |park| %>
+          <div class="row">    
             <div class="col-sm-5">
               <div class="content-params-parkings">
                 <i data-favorite-id="<%= park.favorite_id %>" class="fa <% if park.favorite_id  %>fa-heart <% else %> fa-heart-o<% end %> icon-favorite" data-id="<%= park.id %>" aria-hidden="true"></i>
@@ -78,6 +79,7 @@
             </a>
           </a>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>
