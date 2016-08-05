@@ -5,25 +5,25 @@
 
 <div class="hero">
   <h1>TuParqueo.com en:</h1>
-  <%= form_tag("/parkings", method: "get", class: 'form-inline') do %>
-  
+  <form class="form-inline" method="GET" action="/parkings">
     <div class="form-group">
-      <%= text_field_tag( :direccion) %>
+      <input type="text" name="direccion" class="form-control" placeholder ="Direccion" />
     </div>
     
     <div class="form-group">
-      
-      <%= select("distrito",'id' ) do %>
+      <select class="form-control" name="distrito">
         <% @district.each do |district| %>
-          <%= content_tag(:option, district.nombre, value: district.id) %>
+          <option value="<%= district.id %>">
+            <%= district.nombre %>
+          </option>
         <% end %>
-      <% end %>
+      </select>
     </div>
     
     <div class="form-group">
-      <%= submit_tag("Buscar", class: 'btn btn-success') %>
+      <button class="btn btn-success">Buscar</button>
     </div>
-  <% end %>
+  </form>
   <br>
   </br>
 </div>
