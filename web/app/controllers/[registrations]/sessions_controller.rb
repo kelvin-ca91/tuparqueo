@@ -1,5 +1,23 @@
 class [registrations]::SessionsController < Devise::SessionsController
 # before_action :configure_sign_in_params, only: [:create]
+def new
+end
+def create
+  user = User.find_by_email(params[:email])
+  if user && user.authenticate(params[:password])
+    cookies.permanent[:auth_token] = user.auth_token
+    redirect_to root_url, :notice => "Logged in!"
+    else
+      flash.now.alert = "invalid email or password"
+      render "new"
+    end
+  end
+  
+  def destroy
+    cookies.delete(:auth_token)
+    redirect_to root_url, :notice => "Logged out"
+  end
+end
 
   # GET /resource/sign_in
   # def new
