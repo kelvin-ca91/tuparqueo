@@ -5637,3 +5637,51 @@ Processing by HomeController#account as HTML
 Completed 200 OK in 173ms (Views: 111.8ms | ActiveRecord: 2.4ms)
 
 
+Started DELETE "/users/sign_out" for 200.48.88.221 at 2016-08-05 21:58:39 +0000
+Cannot render console from 200.48.88.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t0J5H6zWqpycgUOJUGisJoIIQkCBWCMOHV4x7HW7jfuBzGbryYd8FnkBsF2+cXqhQsuPzJ4ohTYYJQSB/mVSoQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://tuparqueov2-rbert1903.c9users.io/
+Completed 302 Found in 167ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 200.48.88.221 at 2016-08-05 21:58:40 +0000
+Cannot render console from 200.48.88.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 191ms (Views: 183.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-06 03:18:41 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (553.1ms)
+Completed 200 OK in 768ms (Views: 732.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-06 03:18:48 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 190ms (Views: 187.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-06 03:18:58 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 92ms (Views: 90.1ms | ActiveRecord: 0.3ms)
+
+
