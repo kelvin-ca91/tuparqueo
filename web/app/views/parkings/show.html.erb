@@ -38,6 +38,7 @@
   	    </div>
   	    
   	    <!-- DERECHA -->
+  	    <% if current_user.id == @parking.users_id %>
   	      <div class="col-md-4">
   	      <div class="panel panel-primary">
   	        <div class="panel-heading">
@@ -140,6 +141,7 @@
   	      </div>
   	      
   	    </div>
+  	    <% end %>
   	  </div>
   	  
   	  <!-- Espacio para el mapa -->
