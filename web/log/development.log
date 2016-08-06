@@ -5637,3 +5637,40 @@ Processing by HomeController#account as HTML
 Completed 200 OK in 173ms (Views: 111.8ms | ActiveRecord: 2.4ms)
 
 
+Started GET "/parkings?direccion=a&distrito=0" for 181.64.14.246 at 2016-08-06 03:12:34 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"a", "distrito"=>"0"}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%a%'[0m
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (1078.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1393ms (Views: 1280.1ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/parkings/1" for 181.64.14.246 at 2016-08-06 03:16:08 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  Rendering parkings/show.html.erb within layouts/application
+  Rendered parkings/show.html.erb within layouts/application (24.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 159.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home/account" for 181.64.14.246 at 2016-08-06 03:16:12 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p LEFT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 382ms (Views: 166.9ms | ActiveRecord: 8.8ms)
+
+
