@@ -32,7 +32,9 @@ class RentalsController < ApplicationController
     def destroy
         rentals = Rentals.find_by(id: params[:id])
         rentals.update(estado: 0)
-        # Parking.find(params[:id]).destroy
+        
+        parkings = Parking.find_by(id: rentals.parkings_id)
+        parkings.update(estado:1)
     end
     
     
