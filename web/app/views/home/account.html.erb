@@ -11,7 +11,7 @@
           MIS DATOS 
         </a>
         <a href="javascript:;" data-id="account-reserves" class="list-group-item">
-          <span class="badge">0</span>
+          <span class="badge"><%= @rentals.size %></span>
           MIS ALQUILERES
         </a>
         <a href="javascript:;" data-id="account-parkings" class="list-group-item ">
@@ -63,6 +63,9 @@
                 <td><%= truncate(rentals.descripcion, :length => 100) %></td>
                 <td><%= truncate(rentals.direccion, :length => 100) %></td>
                 <td class="text-center">
+                  <a href="<%= parkings_path %>/<%= rentals.id %>" class="btn btn-warning ">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                  </a>
                   <button type="button" data-id="<%= rentals.rentals_id %>" class="btn btn-danger btn-delete-rentals">
                     <i class="fa fa-trash" aria-hidden="true"></i>
                   </button>
