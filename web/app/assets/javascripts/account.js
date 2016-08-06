@@ -9,16 +9,34 @@ $(document).ready(function(){
     $('#'+id).removeClass('hidden');
   });
   
-  $('#btn-disable-parking').on('click', function(){
+  $('.btn-disable-parking').on('click', function(){
     var $this = $(this);
     var id = $(this).attr('data-id');
     $.ajax({
-      url: "../parkings/disable",
+      url: "../parkings/disabled",
       method: 'POST',
       dataType: 'html',
       data: {id: id},
       success: function(data){
-        $this.parent().parent().addClass('warning');
+        if( $this.parent().parent().hasClass('warning') ){
+          $this.parent().parent().removeClass('warning');
+        }else{
+          $this.parent().parent().addClass('warning');
+        }
+      }
+    });
+  });
+
+  $('.btn-delete-rentals').on('click', function(){
+    var $this = $(this);
+    var id = $this.attr('data-id');
+    $.ajax({
+      url: "../rentals/"+id,
+      method: 'DELETE',
+      dataType: 'html',
+      success: function(data){
+        $this.parent().parent().remove();
+        $('#rentals-cant').html( $('#rentals-cant').html()-1 );
       }
     });
   });

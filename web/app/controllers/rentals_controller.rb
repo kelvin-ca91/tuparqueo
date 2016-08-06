@@ -26,8 +26,11 @@ class RentalsController < ApplicationController
         if rentals.save
             parkings = Parking.find_by(id: params[:parkings_id])
             parkings.update(estado: 2)
-        end
-            
+        end     
+    end
+    
+    def destroy
+        
     end
     
     

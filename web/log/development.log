@@ -1432,3 +1432,823 @@ Processing by HomeController#account as HTML
 Completed 200 OK in 205ms (Views: 88.0ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:37:47 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 242ms (Views: 157.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:38:32 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (126.4ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 283ms (Views: 148.0ms | ActiveRecord: 127.5ms)
+
+
+Started POST "/parkings/disable" for 200.0.118.173 at 2016-08-06 22:38:36 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/parkings/disable"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (28.4ms)
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:38:58 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.1ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (26.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 120ms (Views: 87.2ms | ActiveRecord: 26.9ms)
+
+
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 22:39:02 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/parkings/disabled"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (33.2ms)
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:42:17 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (1024.9ms)
+Completed 200 OK in 1295ms (Views: 1183.1ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 22:42:24 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/parkings/disabled"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (21.8ms)
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 22:44:18 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#disabled as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+No template found for ParkingsController#disabled, rendering head :no_content
+Completed 204 No Content in 289ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:45:05 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 357ms (Views: 113.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/parkings/new" for 200.0.118.173 at 2016-08-06 22:45:22 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#new as HTML
+  Rendering parkings/_form_parking.html.erb within layouts/blank
+  [1m[36mDistrict Load (4.5ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/_form_parking.html.erb within layouts/blank (87.6ms)
+Completed 200 OK in 108ms (Views: 67.7ms | ActiveRecord: 36.3ms)
+
+
+Started POST "/parkings" for 200.0.118.173 at 2016-08-06 22:45:46 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4annYhfAyjX42R5gUgvoyLIi5rNh2RCnUF7AH8mo/zHwT6tIULrm7CFCuHwv4gq8eH/vrJ/xhZ1LXdO0DSzJPg==", "parking"=>{"titulo"=>"Parqueo nro 1", "districts_id"=>"2", "costo_dia"=>"10", "costo_mes"=>"200", "costo_anho"=>"30000", "descripcion"=>"Des", "terminos_condiciones"=>"termin", "direccion"=>"Parinacochas 2087", "latitud"=>"-12.07994580486296", "longitud"=>"-77.01866626739502"}, "commit"=>"Guardar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `parkings` (`titulo`, `descripcion`, `created_at`, `updated_at`, `users_id`, `costo_dia`, `costo_mes`, `costo_anho`, `latitud`, `longitud`, `direccion`, `districts_id`, `estado`, `terminos_condiciones`) VALUES ('Parqueo nro 1', 'Des', '2016-08-06 22:45:46', '2016-08-06 22:45:46', 1, 10, 200, 30000, '-12.07994580486296', '-77.01866626739502', 'Parinacochas 2087', 2, 1, 'termin')[0m
+  [1m[35m (131.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://tuparqueo-kelvinca91.c9users.io/home/account
+Completed 302 Found in 143ms (ActiveRecord: 131.9ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:45:46 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 98ms (Views: 88.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 22:46:26 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#disabled as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `parkings` SET `estado` = 2, `updated_at` = '2016-08-06 22:46:26' WHERE `parkings`.`id` = 1[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+No template found for ParkingsController#disabled, rendering head :no_content
+Completed 204 No Content in 230ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/parkings/new" for 200.0.118.173 at 2016-08-06 22:47:01 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#new as HTML
+  Rendering parkings/_form_parking.html.erb within layouts/blank
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/_form_parking.html.erb within layouts/blank (8.3ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/parkings" for 200.0.118.173 at 2016-08-06 22:47:14 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KEDgBt/XlSXYLno/qXVlEqN5AKeLatGFmdIbf6Ujr385pqwsmK25/AG13CPUnIdmaSQJuHVCRL+C0QjUYaeZcA==", "parking"=>{"titulo"=>"Parqueo nro 1", "districts_id"=>"1", "costo_dia"=>"1212", "costo_mes"=>"1212", "costo_anho"=>"121212", "descripcion"=>"1asas", "terminos_condiciones"=>"as", "direccion"=>"Teniente Jose Sannoni", "latitud"=>"-12.078854711332363", "longitud"=>"-77.0175290107727"}, "commit"=>"Guardar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `parkings` (`titulo`, `descripcion`, `created_at`, `updated_at`, `users_id`, `costo_dia`, `costo_mes`, `costo_anho`, `latitud`, `longitud`, `direccion`, `districts_id`, `estado`, `terminos_condiciones`) VALUES ('Parqueo nro 1', '1asas', '2016-08-06 22:47:14', '2016-08-06 22:47:14', 1, 1212, 1212, 121212, '-12.078854711332363', '-77.0175290107727', 'Teniente Jose Sannoni', 1, 1, 'as')[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://tuparqueo-kelvinca91.c9users.io/home/account
+Completed 302 Found in 15ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:47:14 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 96ms (Views: 89.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:47:34 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 146ms (Views: 140.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 200.0.118.173 at 2016-08-06 22:47:41 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 184ms (Views: 180.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 200.0.118.173 at 2016-08-06 22:47:43 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.1ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (66.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 145ms (Views: 140.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 22:47:46 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#disabled as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `parkings` SET `estado` = 2, `updated_at` = '2016-08-06 22:47:46' WHERE `parkings`.`id` = 1[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for ParkingsController#disabled, rendering head :no_content
+Completed 204 No Content in 208ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 200.0.118.173 at 2016-08-06 22:47:48 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.1ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (158.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 243ms (Views: 238.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 200.0.118.173 at 2016-08-06 22:49:52 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 135ms (Views: 106.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:52:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 180ms (Views: 129.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:53:07 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 266ms (Views: 94.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:53:54 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 231ms (Views: 223.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:55:32 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.7ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/web/app/views/home/account.html.erb:161: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/web/app/views/home/account.html.erb:163: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/home/account.html.erb:161: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/home/account.html.erb:163: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.6ms)
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:56:01 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.1ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 283ms (Views: 125.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:56:13 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (108.4ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 109.1ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/web/app/views/home/account.html.erb:161: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/web/app/views/home/account.html.erb:163: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/home/account.html.erb:161: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/home/account.html.erb:163: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.8ms)
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:56:44 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/web/app/views/home/account.html.erb:164: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/web/app/views/home/account.html.erb:166: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/home/account.html.erb:164: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/home/account.html.erb:166: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.3ms)
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:57:00 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 237ms (Views: 229.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:57:12 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.1ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/web/app/views/home/account.html.erb:164: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/web/app/views/home/account.html.erb:166: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/home/account.html.erb:164: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/home/account.html.erb:166: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.1ms)
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:57:36 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 92ms (Views: 86.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/new" for 200.0.118.173 at 2016-08-06 22:57:45 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/workspace/web/app/controllers/parkings_controller.rb:70: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/parkings_controller.rb:70: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (90.7ms)
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:57:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 136ms (Views: 87.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/new" for 200.0.118.173 at 2016-08-06 22:58:00 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#new as HTML
+  Rendering parkings/_form_parking.html.erb within layouts/blank
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/_form_parking.html.erb within layouts/blank (17.6ms)
+Completed 200 OK in 52ms (Views: 31.7ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/parkings" for 200.0.118.173 at 2016-08-06 22:58:19 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rwPKzH9I6mgFyRmt0RCJzUmx6V5Gp03Splpgr12kaIK+5YbmODLGsdxSv7Gs+Wu5g+zgQbiP2Oi9WXMEmSBejQ==", "parking"=>{"titulo"=>"Parqueo nro 1", "districts_id"=>"2", "costo_dia"=>"12", "costo_mes"=>"1212", "costo_anho"=>"1212121", "descripcion"=>"Desc", "terminos_condiciones"=>"Ter", "direccion"=>"Av. Javier Prado Este", "latitud"=>"-12.09102434883866", "longitud"=>"-77.0240306854248"}, "commit"=>"Guardar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `parkings` (`titulo`, `descripcion`, `created_at`, `updated_at`, `users_id`, `costo_dia`, `costo_mes`, `costo_anho`, `latitud`, `longitud`, `direccion`, `districts_id`, `estado`, `terminos_condiciones`) VALUES ('Parqueo nro 1', 'Desc', '2016-08-06 22:58:19', '2016-08-06 22:58:19', 1, 12, 1212, 1212121, '-12.09102434883866', '-77.0240306854248', 'Av. Javier Prado Este', 2, 1, 'Ter')[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://tuparqueo-kelvinca91.c9users.io/home/account
+Completed 302 Found in 41ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:58:19 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 92ms (Views: 84.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/parkings/new" for 200.0.118.173 at 2016-08-06 22:58:25 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#new as HTML
+  Rendering parkings/_form_parking.html.erb within layouts/blank
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/_form_parking.html.erb within layouts/blank (5.9ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/parkings" for 200.0.118.173 at 2016-08-06 22:58:41 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eaRMxjdjckkyZKvz0JlZIZF3j/loZ5lyRPPTk1KA08toQgDscBlekOv/De+tcLtVWyqG5pZPDEhf8MA4lgTlxA==", "parking"=>{"titulo"=>"Titulo 2", "districts_id"=>"3", "costo_dia"=>"112", "costo_mes"=>"12192", "costo_anho"=>"12912", "descripcion"=>"asdasd", "terminos_condiciones"=>"asd", "direccion"=>"Av. Canadá 1027", "latitud"=>"-12.08237976671417", "longitud"=>"-77.01609134674072"}, "commit"=>"Guardar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `parkings` (`titulo`, `descripcion`, `created_at`, `updated_at`, `users_id`, `costo_dia`, `costo_mes`, `costo_anho`, `latitud`, `longitud`, `direccion`, `districts_id`, `estado`, `terminos_condiciones`) VALUES ('Titulo 2', 'asdasd', '2016-08-06 22:58:41', '2016-08-06 22:58:41', 1, 112, 12192, 12912, '-12.08237976671417', '-77.01609134674072', 'Av. Canadá 1027', 3, 1, 'asd')[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://tuparqueo-kelvinca91.c9users.io/home/account
+Completed 302 Found in 21ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:58:41 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 88ms (Views: 76.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 200.0.118.173 at 2016-08-06 22:59:07 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (51.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 134ms (Views: 127.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 22:59:11 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#disabled as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `parkings` SET `estado` = 3, `updated_at` = '2016-08-06 22:59:11' WHERE `parkings`.`id` = 1[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for ParkingsController#disabled, rendering head :no_content
+Completed 204 No Content in 267ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 200.0.118.173 at 2016-08-06 22:59:14 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.7ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (32.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 127ms (Views: 119.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 22:59:19 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 151ms (Views: 95.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 22:59:33 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#disabled as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `parkings` SET `estado` = 1, `updated_at` = '2016-08-06 22:59:33' WHERE `parkings`.`id` = 1[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for ParkingsController#disabled, rendering head :no_content
+Completed 204 No Content in 285ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 200.0.118.173 at 2016-08-06 22:59:34 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (17.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 114ms (Views: 107.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 23:00:31 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 266ms (Views: 101.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 23:00:36 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#disabled as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `parkings` SET `estado` = 3, `updated_at` = '2016-08-06 23:00:36' WHERE `parkings`.`id` = 1[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+No template found for ParkingsController#disabled, rendering head :no_content
+Completed 204 No Content in 215ms (ActiveRecord: 6.1ms)
+
+
+Started POST "/parkings/disabled" for 200.0.118.173 at 2016-08-06 23:00:39 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#disabled as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `parkings` SET `estado` = 1, `updated_at` = '2016-08-06 23:00:39' WHERE `parkings`.`id` = 1[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for ParkingsController#disabled, rendering head :no_content
+Completed 204 No Content in 227ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 23:00:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (99.1ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 187ms (Views: 80.4ms | ActiveRecord: 100.3ms)
+
+
+Started GET "/parkings/1" for 200.0.118.173 at 2016-08-06 23:01:18 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  Rendering parkings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered parkings/show.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 174ms (Views: 169.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 23:01:46 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 364ms (Views: 193.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings/1" for 200.0.118.173 at 2016-08-06 23:01:48 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  Rendering parkings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered parkings/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 164ms (Views: 159.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/rentals" for 200.0.118.173 at 2016-08-06 23:01:57 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RentalsController#create as */*
+  Parameters: {"parkings_id"=>"1", "fechaInicio"=>"2016-08-06", "fechaFin"=>"8/11/2016", "cantDias"=>"5", "montoTotal"=>"60", "tiempo"=>"dias"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `rentals` (`users_id`, `parkings_id`, `fecha_inicio`, `fecha_fin`, `monto`, `cant_tiempo`, `tiempo`, `estado`, `created_at`, `updated_at`) VALUES (1, 1, '2016-08-06', '2016-08-11', 60, 5, 'dias', 1, '2016-08-06 23:01:58', '2016-08-06 23:01:58')[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `parkings` SET `estado` = 2, `updated_at` = '2016-08-06 23:01:58' WHERE `parkings`.`id` = 1[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for RentalsController#create, rendering head :no_content
+Completed 204 No Content in 420ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 23:02:03 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 237ms (Views: 82.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 23:06:20 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.1ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id AND p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id AND r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id AND p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 130ms (Views: 123.4ms | ActiveRecord: 0.8ms)
+
+

@@ -9,10 +9,16 @@ class ParkingsController < ApplicationController
             @parking = Parking.find_by_sql("SELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%#{params[:direccion]}%'")
             @district_search = District.first
         end
-        
-        
     end
-    # 
+    
+    def disabled 
+        parking = Parking.find_by(id: params[:id])
+        if parking.estado == 1
+            parking.update(estado: 3)
+        elsif parking.estado == 3
+            parking.update(estado: 1)
+        end
+    end
     
     def show
         @parking = Parking.find(params[:id])

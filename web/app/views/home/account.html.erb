@@ -14,7 +14,7 @@
           MIS DATOS 
         </a>
         <a href="javascript:;" data-id="account-reserves" class="list-group-item">
-          <span class="badge"><%= @rentals.size %></span>
+          <span class="badge" id="rentals-cant"><%= @rentals.size %></span>
           MIS ALQUILERES
         </a>
         <a href="javascript:;" data-id="account-parkings" class="list-group-item ">
@@ -94,28 +94,37 @@
               <th class='col-md-1'>CostoxAño</th>
               <th class='col-md-2'></th>
             </tr>
-            <% @parking.each do |park| %>
-              <tr>
-                <td><%= park.titulo %></td>
-                <td><%= truncate(park.descripcion, :length => 100) %></td>
-                <td><%= park.costo_dia %></td>
-                <td><%= park.costo_mes %></td>
-                <td><%= park.costo_anho %></td>
-                <td class="text-center">
-                  <button type="button" data-id="<%= park.id %>" class="btn btn-warning btn-disable-parking">
-                    <i class="fa fa-ban" aria-hidden="true"></i>
-                  </button>
-                  &nbsp;
-                  <button type="button" data-id="<%= park.id %>" class="btn btn-primary btn-edit-parking">
-                    <i class="fa fa-pencil" aria-hidden="true"></i>
-                  </button>
-                  &nbsp;
-                  <button type="button" data-id="<%= park.id %>" class="btn btn-danger btn-delete-parking">
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>
-                </td>
-              </tr> 
-            <%end%>
+            <% 
+            if @parking
+              @parking.each do |park| %>
+                <% 
+                if park.estado == 2
+                  clase = "success"
+                elsif park.estado == 3
+                  clase = "warning"
+                end %>
+                <tr class="<%= clase %>">
+                  <td><%= park.titulo %></td>
+                  <td><%= truncate(park.descripcion, :length => 100) %></td>
+                  <td><%= park.costo_dia %></td>
+                  <td><%= park.costo_mes %></td>
+                  <td><%= park.costo_anho %></td>
+                  <td class="text-center">
+                    <button type="button" data-id="<%= park.id %>" class="btn btn-warning btn-disable-parking">
+                      <i class="fa fa-ban" aria-hidden="true"></i>
+                    </button>
+                    &nbsp;
+                    <button type="button" data-id="<%= park.id %>" class="btn btn-primary btn-edit-parking">
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    &nbsp;
+                    <button type="button" data-id="<%= park.id %>" class="btn btn-danger btn-delete-parking">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                  </td>
+                </tr> 
+              <% end
+            end %>
           </table>
         </div>
       </div>
