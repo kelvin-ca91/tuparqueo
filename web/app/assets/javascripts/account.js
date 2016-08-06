@@ -8,6 +8,20 @@ $(document).ready(function(){
     $('#div-account .panel').addClass('hidden');
     $('#'+id).removeClass('hidden');
   });
+  
+  $('#btn-disable-parking').on('click', function(){
+    var $this = $(this);
+    var id = $(this).attr('data-id');
+    $.ajax({
+      url: "../parkings/disable",
+      method: 'POST',
+      dataType: 'html',
+      data: {id: id},
+      success: function(data){
+        $this.parent().parent().addClass('warning');
+      }
+    });
+  });
 
   // Nuevo parking
   $('#btn-new-parking').on('click', function(){

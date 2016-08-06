@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :parkings
+  post 'favorites/disabled'
   resources :favorites
   resources :rentals
 

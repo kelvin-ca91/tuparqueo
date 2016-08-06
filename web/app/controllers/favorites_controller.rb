@@ -11,4 +11,9 @@ class FavoritesController < ApplicationController
     favorite = Favorite.where(users_id: params[:userId], parkings_id: params[:parkingId])
     Favorite.find(favorite[0].id).destroy
   end
+  
+  def disabled 
+    parking = Parking.find_by(id: params[:id])
+    parking.update(estado: 2)
+  end
 end
