@@ -6,13 +6,23 @@ $(document).ready(function() {
         $.ajax({
             url:'../rentals',
             method: 'POST',
-            data: {parkings_id:$('#parkings_id').val()},
+            data: {parkings_id:$('#parkings_id').val(), fechaInicio: $('#fechaInicio').val(), fechaFin: $('#fechaFin').html(), cantDias: $('#cantDias').val(), montoTotal: $('#montoTotal').html(), tiempo: $('.active .tiempo').val()},
             success: function(data){
                 $('#myModal .modal-title').text('Felicidades!!');
                 $('#myModal .modal-body').html('<div class="text-center"><h2>Gracias por confiar en nosotros</h3><h4>Su alquiler se ha realizado correctamente</h4></div>');
                 $('#myModal').modal('show');
             }
-        })    
+        });
+    });
+    
+    $('#cantDias').on('keyup', function(){
+        var fechaInicio = $('#fechaInicio').val();
+        var arrayFecha = fechaInicio.split('-');
+        var miFecha = new Date(arrayFecha[0], arrayFecha[1], arrayFecha[2]); 
+        miFecha.setTime( miFecha.getTime()+ $(this).val() *24*60*60*1000 );
+        $('#fechaFin').html( miFecha.getMonth()+'/'+miFecha.getDate()+'/'+miFecha.getFullYear() );
+        $('#montoTotal').html( $('#cantDias').val() * $('#costoDia').html() );
+        
     });
 });
 

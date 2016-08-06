@@ -10,7 +10,19 @@ class RentalsController < ApplicationController
     
     
     def create
-        rentals = Rental.new(users_id: current_user.id, parkings_id: params[:parkings_id], estado: 1 )
+        fechaInicio = params[:fechaInicio].split('-')
+        fechaFin = params[:fechaFin].split('/')
+        
+        rentals = Rental.new(
+            users_id: current_user.id, 
+            parkings_id: params[:parkings_id], 
+            fecha_inicio:  fechaInicio[2]+'-'+fechaInicio[0]+'-'+fechaInicio[1] , 
+            fecha_fin: fechaFin[2]+'-'+fechaFin[0]+'-'+fechaFin[1] ,
+            monto: params[:montoTotal],
+            cant_tiempo: params[:cantDias],
+            tiempo: params[:tiempo],
+            estado: 1 )
+            
         if rentals.save
             parkings = Parking.find_by(id: params[:parkings_id])
             parkings.update(estado: 2)
