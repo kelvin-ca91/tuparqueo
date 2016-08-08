@@ -8,9 +8,11 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    favorite = Favorite.where(users_id: params[:userId], parkings_id: params[:parkingId])
-    Favorite.find(favorite[0].id).destroy
+    if params[:id]
+      Favorite.find(params[:id]).destroy
+    else
+      favorite = Favorite.where(users_id: params[:userId], parkings_id: params[:parkingId])
+      Favorite.find(favorite[0].id).destroy
+    end
   end
-  
-  
 end

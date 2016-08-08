@@ -2362,3 +2362,161 @@ Processing by HomeController#account as HTML
 Completed 200 OK in 149ms (Views: 88.0ms | ActiveRecord: 4.7ms)
 
 
+Started GET "/" for 200.0.118.173 at 2016-08-06 23:25:14 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (119.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 210ms (Views: 199.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 200.0.118.173 at 2016-08-06 23:25:16 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.1ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (13.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 104ms (Views: 81.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/parkings/2" for 200.0.118.173 at 2016-08-06 23:25:19 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  Rendering parkings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered parkings/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 163ms (Views: 158.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home/account" for 200.0.118.173 at 2016-08-06 23:25:41 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id WHERE p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id WHERE r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id WHERE p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 230ms (Views: 72.3ms | ActiveRecord: 132.6ms)
+
+
+Started GET "/parkings/2" for 200.0.118.173 at 2016-08-06 23:25:43 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  `parkings`.* FROM `parkings` WHERE `parkings`.`id` = 2 LIMIT 1[0m
+  Rendering parkings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered parkings/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 98ms (Views: 93.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-08 03:16:33 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (894.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 1181ms (Views: 1138.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/home/account" for 181.64.14.246 at 2016-08-08 03:16:54 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#account as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT * FROM parkings WHERE users_id = 1 AND estado!=0 [0m
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p JOIN favorites f ON f.parkings_id = p.id WHERE p.estado!= 0 AND f.users_id= 1[0m
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT p.*, r.id AS rentals_id FROM parkings p RIGHT JOIN rentals r ON r.parkings_id = p.id WHERE r.estado = 1 AND r.users_id = 1[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT SUM(r.monto) AS monto_total FROM rentals r LEFT JOIN parkings p ON r.parkings_id = p.id WHERE p.users_id = 1[0m
+  Rendering home/account.html.erb within layouts/application
+  Rendered home/account.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 342ms (Views: 128.1ms | ActiveRecord: 175.9ms)
+
+
+Started DELETE "/favorites/4" for 181.64.14.246 at 2016-08-08 03:17:21 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT `favorites`.* FROM `favorites` WHERE `favorites`.`users_id` IS NULL AND `favorites`.`parkings_id` IS NULL[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/favorites_controller.rb:12:in `destroy'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (85.7ms)
+Started DELETE "/favorites/4" for 181.64.14.246 at 2016-08-08 03:20:35 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FavoritesController#destroy as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT  `favorites`.* FROM `favorites` WHERE `favorites`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `favorites` WHERE `favorites`.`id` = 4[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for FavoritesController#destroy, rendering head :no_content
+Completed 204 No Content in 333ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 181.64.14.246 at 2016-08-08 03:20:38 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (142.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 309ms (Views: 297.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 181.64.14.246 at 2016-08-08 03:20:40 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (42.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 208ms (Views: 164.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 66.249.88.52 at 2016-08-08 03:22:07 +0000
+Cannot render console from 66.249.88.52! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered home/index.html.erb within layouts/application (100.9ms)
+Completed 200 OK in 194ms (Views: 191.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parkings?direccion=&distrito=0" for 181.64.14.246 at 2016-08-08 03:31:39 +0000
+Cannot render console from 181.64.14.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Parameters: {"direccion"=>"", "distrito"=>"0"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT p.*, f.id as favorite_id FROM parkings p LEFT JOIN favorites f ON f.parkings_id = p.id WHERE p.estado = 1 AND p.direccion LIKE '%%'[0m
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  `districts`.* FROM `districts` ORDER BY `districts`.`id` ASC LIMIT 1[0m
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT `districts`.* FROM `districts`[0m
+  Rendered parkings/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 216ms (Views: 211.2ms | ActiveRecord: 0.6ms)
+
+
