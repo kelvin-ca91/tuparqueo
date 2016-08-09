@@ -64,7 +64,7 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
   :address => "smtp.sendgrid.net",
   :port => 2525,
-  :domain => "proyecto-dos-jona2016.c9users.i",
+  :domain => "tuparqueo-kelvinca91.c9users.io",
   :user_name => "jonathan.sucasaca",
   :password => "Jonathan92",
   :authentication => :plain,
@@ -72,7 +72,7 @@ Rails.application.configure do
   :ssl =>false
   }
   
-  config.action_mailer.default_url_options = {host: "proyecto-dos-jona2016.c9users.io"}
+  config.action_mailer.default_url_options = {host: "tuparqueo-kelvinca91.c9users.io"}
   
   config.action_mailer.perform_deliveries = true
 

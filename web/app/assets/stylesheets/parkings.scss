@@ -9,22 +9,26 @@
     display: inline-block;
     width: 45%;
 }
-#list-search div.row{
-    margin: 3px 0;
-    .content-params-parkings{
-        position: absolute;
-        i{
-            color: red;
-            font-size: 30px;
+#list-search {
+    height: 545px;
+    overflow-x: hidden;
+    div.row{
+        margin: 3px 0;
+        .content-params-parkings{
+            position: absolute;
+            i{
+                color: red;
+                font-size: 30px;
+            }
         }
-    }
-    a{
-        color: #000;
-        
-    }
-    &.col-principal.active{
-        box-shadow: 0px 1px 13px 3px;
-        margin: 10px 0 !important;
-        padding: 5px 0;
+        a{
+            color: #000;
+            
+        }
+        &.col-principal.active{
+            box-shadow: 0px 1px 13px 3px;
+            margin: 10px 0 !important;
+            padding: 5px 0;
+        }
     }
 }

@@ -3,7 +3,7 @@
 <% end %>
 <div class="container">
   
-  <input type="hidden" value="<%= @parking.id %>" id="parkings_id" />
+  
   
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -56,37 +56,48 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div role="tabpanel" class="tab-pane fade in active" id="tab-reserva-dias">
-                    <form>
+                    <form id="payment-form" method="POST" action="<%= rentals_path %>">
+                      <input type="hidden" value="<%= @parking.id %>" id="parkings_id" name="parkings_id" />
                       <div class="form-group">
                         <h4>
                           Precio: S/. <span id="costoDia"><%= @parking.costo_dia %></span>
                         </h4>
                       </div>
                       <hr />
-                      <input type="hidden" class="tiempo" value="dias" />
+                      <input type="hidden" class="tiempo" name="tiempo" value="dias" />
                       <div class="form-group">
                         <label class="control-label">Fecha Inicio</label>
-                        <input type="date" id="fechaInicio" class="form-control" />
+                        <input type="date" id="fechaInicio" name="fechaInicio" class="form-control" />
                       </div>
                       
                       <div class="form-group">
                         <label class="control-label">Cantidad dias</label>
-                        <input type="number" class="form-control" id="cantDias">
+                        <input type="number" class="form-control" name="cantDias" id="cantDias">
                       </div>
                       
                       <div class="form-group">
                         <label class="control-label">Fecha Fin</label>
                         <br>
-                        <span id="fechaFin">fecha</span>
+                        <input id="fechaFin" type="text" readonly name="fechaFin" class="form-control" />
                       </div>
                       
                       <div class="form-group">
                         <label class="control-label">Monto a Pagar:</label>
                         <br>
-                        S./ <span id="montoTotal">0</span>
+                        S./ <input id="montoTotal" readonly name="montoTotal" class="form-control" value="0" />
                       </div>
                       <div class="form-group">
                         <button type="button" class="btn btn-success form-control btn-alquilar">Alquilar</button>
+                        
+                        <script
+                          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                          data-key="pk_test_om9JIRPO6EFk5cpxkWjHt16G"
+                          data-amount="PAGAR"
+                          data-name="TuParqueo.com"
+                          data-description="Widget"
+                          data-image="/img/documentation/checkout/marketplace.png"
+                          data-locale="auto">
+                        </script>
                       </div>
                     </form>
                   </div>
@@ -133,6 +144,7 @@
                         <button type="button" class="btn btn-success form-control btn-alquilar">Alquilar</button>
                       </div>
                     </form>
+  	   
                   </div>
                 </div>
               
@@ -142,6 +154,7 @@
   	      
   	    </div>
   	    <% end %>
+  	     
   	  </div>
   	  
   	  <!-- Espacio para el mapa -->
@@ -158,7 +171,11 @@
             <div class="carousel-inner cont-slider">
           
               <div class="item active">
-                <img alt="" title="" src="http://placehold.it/600x400">
+                <%  if @parking.image_file_name %>
+                  <%= image_tag @parking.image.url(:big), :class => 'img-responsive' %>
+                <% else %>
+                  <%= image_tag 'parqueo1.jpg' , :class => 'img-responsive' %>
+                <% end %>
               </div>
               <div class="item">
                 <img alt="" title="" src="http://placehold.it/600x400">

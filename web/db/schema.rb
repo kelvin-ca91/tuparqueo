@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806040952) do
+ActiveRecord::Schema.define(version: 20160808175712) do
 
   create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "nombre"
@@ -42,6 +42,9 @@ ActiveRecord::Schema.define(version: 20160806040952) do
     t.integer  "districts_id"
     t.integer  "estado"
     t.text     "terminos_condiciones", limit: 65535
+    t.text     "image",                limit: 65535
+    t.string   "image_file_name"
+    t.string   "file_name"
   end
 
   create_table "rentals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
